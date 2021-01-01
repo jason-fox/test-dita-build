@@ -1,0 +1,70 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Full list of features</title><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="features-full"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Full list of features</h1>
+    
+    <div class="body language-markup">
+        <ul class="ul">
+            <li class="li">
+              <strong class="ph b">Only 2KB</strong> minified &amp; gzipped (core). Each language definition adds
+              roughly 300-500 bytes.
+            </li>
+            <li class="li">
+              Encourages good author practices. Other highlighters encourage or even force you
+              to use elements that are semantically wrong, like <code class="ph codeph language-markup"><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>pre</span><span class="ph token punctuation">&gt;</span></span></code>
+              (on its own) or <code class="ph codeph language-markup"><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>script</span><span class="ph token punctuation">&gt;</span></span></code>. Prism forces you to use the
+              correct element for marking up code: <code class="ph codeph language-markup"><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>code</span><span class="ph token punctuation">&gt;</span></span></code>. On its own
+              for inline code, or inside a <code class="ph codeph language-markup"><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>pre</span><span class="ph token punctuation">&gt;</span></span></code> for blocks of code.
+              In addition, the language is defined through the way recommended in the HTML5
+              draft: through a <code class="ph codeph language-markup">language-xxxx</code> class.
+            </li>
+            <li class="li">
+              The language definition is inherited. This means that if multiple code snippets
+              have the same language, you can just define it once, in one of their common ancestors.
+            </li>
+            <li class="li">
+              Supports <strong class="ph b">parallelism with Web Workers</strong>, if available. Disabled by default
+              (<a class="xref" href="https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default" target="_blank" rel="external noopener">why?</a>).
+            </li>
+            <li class="li">
+              Very easy to extend without modifying the code, due to Prism’s <a class="xref" href="https://prismjs.com/#plugins" target="_blank" rel="external noopener">plugin architecture</a>.
+              Multiple hooks are scattered throughout the source.
+            </li>
+            <li class="li">
+              Very easy to <a class="xref" href="https://prismjs.com/extending.html#language-definitions" target="_blank" rel="external noopener">define new languages</a>.
+              Only thing you need is a good understanding of regular expressions
+            </li>
+            <li class="li">
+              All styling is done through CSS, with <a class="xref" href="https://prismjs.com/faq.html#how-do-i-know-which-tokens-i-can-style-for" target="_blank" rel="external noopener">sensible class names</a>
+              rather than ugly namespaced abbreviated nonsense.
+            </li>
+            <li class="li">
+              Wide browser support: IE9+, Firefox, Chrome, Safari, <a class="xref" href="https://prismjs.com/faq.html#this-page-doesnt-work-in-opera" target="_blank" rel="external noopener">Opera</a>,
+              most Mobile browsers
+            </li>
+            <li class="li">
+              Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
+            </li>
+            <li class="li">
+              Highlights inline code as well, not just code blocks
+            </li>
+            <li class="li">
+              Highlights nested languages (CSS in HTML, JavaScript in HTML)
+            </li>
+            <li class="li">
+              It doesn’t force you to use any Prism-specific markup, not even a Prism-specific
+              class name, only standard markup you should be using anyway. So, you can just
+              try it for a while, remove it if you don’t like it and leave no traces behind.
+            </li>
+            <li class="li">
+              Highlight specific lines and/or line ranges (requires <a class="xref" href="https://prismjs.com/plugins/line-highlight/" target="_blank" rel="external noopener">plugin</a>)
+            </li>
+            <li class="li">
+              Show invisible characters like tabs, line breaks etc (requires <a class="xref" href="https://prismjs.com/plugins/show-invisibles/" target="_blank" rel="external noopener">plugin</a>)
+            </li>
+            <li class="li">
+              Autolink URLs and emails, use Markdown links in comments (requires <a class="xref" href="https://prismjs.com/plugins/xrefutolinker/" target="_blank" rel="external noopener">plugin</a>)
+            </li>
+        </ul>
+    </div>
+</article></main></body></html>
