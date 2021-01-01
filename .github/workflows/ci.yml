@@ -20,7 +20,7 @@ jobs:
           setup-script: 'setup.sh'
           prerequisites: 'net.infotexture.dita-bootstrap,org.doctales.xmltask,fox.jason.extend.css,fox.jason.prismjs'
           ditamap: 'document.ditamap'
-          transtypes: 'html5,pdf'
+          transtypes: 'html5-bootstrap,pdf'
           output-dir: 'out'
       - name: Upload DITA
         uses: actions/upload-artifact@v2
