@@ -1,0 +1,29 @@
+name: CI
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build-dita:
+    name: Build DITA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Build HTML and PDF
+        uses: jason-fox/dita-build-action@master
+        with:
+          dita-ot-version: 3.6
+          setup-script: 'setup.sh'
+          prerequisites: 'org.doctales.xmltask,fox.jason.extend.css,fox.jason.prismjs'
+          ditamap: 'document.ditamap'
+          transtypes: 'html5,pdf'
+          output-dir: 'out'
+      - name: Upload DITA
+        uses: actions/upload-artifact@v2
+        with:
+          name: dita-artifact
+          path: ~/out
