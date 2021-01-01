@@ -18,7 +18,7 @@ jobs:
         with:
           dita-ot-version: 3.6
           setup-script: 'setup.sh'
-          prerequisites: 'org.doctales.xmltask,fox.jason.extend.css,fox.jason.prismjs'
+          prerequisites: 'net.infotexture.dita-bootstrap,org.doctales.xmltask,fox.jason.extend.css,fox.jason.prismjs'
           ditamap: 'document.ditamap'
           transtypes: 'html5,pdf'
           output-dir: 'out'
