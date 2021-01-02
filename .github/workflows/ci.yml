@@ -13,15 +13,33 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Build HTML and PDF
+      - name: Build PDF
         uses: jason-fox/dita-build-action@master
         with:
-          dita-ot-version: 3.6
-          setup-script: 'setup.sh'
-          prerequisites: 'net.infotexture.dita-bootstrap,org.doctales.xmltask,fox.jason.extend.css,fox.jason.prismjs'
-          ditamap: 'document.ditamap'
-          transtypes: 'html5-bootstrap,pdf'
-          output-dir: 'out'
+          install: |
+            apt update
+            apt install -y --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            net.infotexture.dita-bootstrap
+            org.doctales.xmltask
+            fox.jason.extend.css
+            fox.jason.prismjs
+          input: document.ditamap
+          transtype: pdf
+          output-path: out
+      - name: Build HTML5
+        uses: jason-fox/dita-build-action@master
+        with:
+          install: setup.sh
+          plugins: |
+            net.infotexture.dita-bootstrap
+            org.doctales.xmltask
+            fox.jason.extend.css
+            fox.jason.prismjs
+          input: document.ditamap
+          transtype: html5-bootstrap
+          output-path: out
       - name: Upload DITA
         uses: actions/upload-artifact@v2
         with:
