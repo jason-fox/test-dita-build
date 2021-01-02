@@ -1,10 +1,6 @@
 #! /bin/sh
-apt update
+apt-get update -q
 
-#export DEBIAN_FRONTEND=noninteractive
-#apt-get install -y tzdata
-#ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
-#dpkg-reconfigure --frontend noninteractive tzdata
-
-apt install -y --no-install-recommends nodejs
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -qy --no-install-recommends nodejs
 nodejs -v
