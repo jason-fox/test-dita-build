@@ -17,6 +17,7 @@ jobs:
         uses: jason-fox/dita-build-action@master
         with:
           install: |
+            apt update
             apt install -y --no-install-recommends nodejs
             nodejs -v
           plugins: |
