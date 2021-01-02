@@ -17,18 +17,16 @@ jobs:
         uses: jason-fox/dita-build-action@master
         with:
           install: |
-            apt update
             apt install -y --no-install-recommends nodejs
             nodejs -v
           plugins: |
-            net.infotexture.dita-bootstrap
             org.doctales.xmltask
             fox.jason.extend.css
             fox.jason.prismjs
           input: document.ditamap
           transtype: pdf
           output-path: out
-      - name: Build HTML5
+      - name: Build HTML5 + Bootstrap
         uses: jason-fox/dita-build-action@master
         with:
           install: setup.sh
