@@ -25,25 +25,6 @@ jobs:
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build: |
             dita -i ${GITHUB_WORKSPACE}/document.ditamap -o ${GITHUB_WORKSPACE}/out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
-      - name: Build PDF 🖨️
-        uses: dita-ot/dita-ot-action@master
-        with:
-          install: |
-            apt-get update -q
-            export DEBIAN_FRONTEND=noninteractive
-            apt-get install -qy --no-install-recommends nodejs
-            nodejs -v
-          plugins: |
-            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-          input: document.ditamap
-          transtype: pdf
-          output-path: out
-      - name: Upload PDF 📚
-        uses: actions/upload-artifact@v2
-        with:
-          name: dita-artifact
-          path: 'out/pdf'
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
