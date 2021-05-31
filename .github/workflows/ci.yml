@@ -22,7 +22,7 @@ jobs:
             https://github.com/jason-fox/dita-bootstrap/archive/feature/bootstrap-5.0.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build: |
-            dita -i document.ditamap -o out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
+            dita -i ${GITHUB_WORKSPACE}/document.ditamap -o ${GITHUB_WORKSPACE}/out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
       - name: Build PDF 🖨️
         uses: dita-ot/dita-ot-action@master
         with:
