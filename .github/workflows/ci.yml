@@ -3,50 +3,48 @@ name: CI
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
 jobs:
   build-dita:
     name: Build DITA
     runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build PDF
+      - name: Build Bootstrap ⚙️
         uses: dita-ot/dita-ot-action@master
         with:
           install: |
             apt-get update -q
+            export DEBIAN_FRONTEND=noninteractive
             apt-get install -qy --no-install-recommends nodejs
             nodejs -v
           plugins: |
-            org.doctales.xmltask
-            fox.jason.extend.css
-            fox.jason.prismjs
+            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+            https://github.com/jason-fox/dita-bootstrap/archive/feature/bootstrap-5.0.zip
+            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+          build: |
+            dita -i document.ditamap -o out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
+      - name: Build PDF 🖨️
+        uses: dita-ot/dita-ot-action@master
+        with:
+          install: |
+            apt-get update -q
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           input: document.ditamap
           transtype: pdf
           output-path: out
-      - name: Build HTML5 + Bootstrap
-        uses: dita-ot/dita-ot-action@master
-        with:
-          install: setup.sh
-          plugins: |
-            net.infotexture.dita-bootstrap
-            org.doctales.xmltask
-            fox.jason.extend.css
-            fox.jason.prismjs
-          input: document.ditamap
-          transtype: html5-bootstrap
-          output-path: out
-      - name: Upload DITA
+      - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
           name: dita-artifact
-          path: 'out'
-      - name: Deploy 🚀
+          path: 'out/pdf'
+      - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+          FOLDER: out/html # The folder the action should deploy.
