@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="abstract" content="DITA-OT Translate Plug-in is a plug-in to create, auto-translate and re-merge XLIFF files, generating translated documentation in a targeted foreign language. It can create and consume files using either XLIFF 1.2 or XLIFF 2.1 format."><meta name="description" content="DITA-OT Translate Plug-in is a plug-in to create, auto-translate and re-merge XLIFF files, generating translated documentation in a targeted foreign language. It can create and consume files using either XLIFF 1.2 or XLIFF 2.1 format."><meta name="keywords" content="XLIFF, translation, plug-in"><title>XLIFF Translate Plug-in</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="xliff-translate-plug-in"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">DITA Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Three</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action active" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><div class="list-group"><a class="list-group-item list-group-item-action list-group-item-secondary" href="../translate.xliff/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../translate.xliff/usage.html">Usage</a></div><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">XLIFF Translate Plug-in</h1>
+  
+  
+  <div class="body"><div class="abstract">
+     <span class="shortdesc lead">
+       DITA-OT Translate Plug-in is a plug-in to create, auto-translate and re-merge
+       XLIFF files, generating translated documentation in a targeted foreign
+       language. It can create and consume files using either XLIFF 1.2 or XLIFF 2.1
+       format.
+    </span>
+  </div></div>
+  <article class="topic nested1" aria-labelledby="ariaid-title2" id="example">
+    <h2 class="title h3 mt-3" id="ariaid-title2">Example</h2>
+    <div class="body">
+      <p class="p">
+         This plug-in consists of three DITA-OT transforms
+      </p>
+      <ul class="ul">
+        <li class="li">
+           The <span class="keyword option">xliff-create</span> transform creates XLIFF and skeleton files
+           from the <code class="ph codeph language-markup">*.dita</code> files.
+        </li>
+        <li class="li">
+           The <span class="keyword option">xliff-translate</span> transform populates the <code class="keyword markupname xmlelement">&lt;target&gt;</code>
+           texts using an automatic translation service.
+        </li>
+        <li class="li">
+           The <span class="keyword option">xliff-dita</span> transform recreates the DITA project using the
+           translated texts.
+        </li>
+      </ul>
+      <figure class="fig fignone" id="example__dita-file"><figcaption><span class="fig--title-label">Figure 1. </span>DITA File</figcaption>
+        
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>topic</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>cicero<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>en-us<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Cicero<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>body</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      Loves or pursues or desires to obtain pain of itself, because it
+      is pain, but occasionally circumstances occur in which toil and
+      pain can procure him some great pleasure.
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      To take a trivial example, which of us ever undertakes laborious
+      physical exercise, except to obtain some advantage from it?
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      But who has any right to find fault with a man who chooses to
+      enjoy a pleasure that has no annoying consequences, or one who
+      avoids a pain that produces no resultant pleasure?
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>body</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>topic</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      </figure>
+      <figure class="fig fignone" id="example__sample-xliff-file-with-latin-translation"><figcaption><span class="fig--title-label">Figure 2. </span>Sample XLIFF File (with Latin Translation)</figcaption>
+        
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>xliff</span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>xs</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.w3.org/2001/XMLSchema<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>xsd</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.w3.org/2001/XMLSchema<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>xsi</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>xsl</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.w3.org/1999/XSL/Transform<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>file</span> <span class="ph token attr-name">datatype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>xml<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">original</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>/cicero.dita<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">source-language</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>en<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">target-language</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>es<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>header</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>urn:oasis:names:tc:xliff:document:1.2<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>dita</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.dita-ot.org<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>skl</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>external-file</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>./skl/cicero.dita.skl<span class="ph token punctuation">"</span></span> <span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>skl</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>header</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>body</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>urn:oasis:names:tc:xliff:document:1.2<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>dita</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>http://www.dita-ot.org<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>trans-unit</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span><span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>dita</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>dita-ot.org<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">approved</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>no<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>42094<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>space</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>preserve<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+           <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>source</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>en<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            Loves or pursues or desires to obtain pain of itself, because it
+            is pain, but occasionally circumstances occur in which toil and
+            pain can procure him some great pleasure.
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>source</span><span class="ph token punctuation">&gt;</span></span>
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>target</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>la<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>target</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>trans-unit</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>trans-unit</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span><span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>dita</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>dita-ot.org<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">approved</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>no<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>5532<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>space</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>preserve<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+           <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>source</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>en<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            To take a trivial example, which of us ever undertakes laborious
+            physical exercise, except to obtain some advantage from it?
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>source</span><span class="ph token punctuation">&gt;</span></span>
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>target</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>la<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>target</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>trans-unit</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>trans-unit</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span><span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xmlns:</span>dita</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>dita-ot.org<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">approved</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>no<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>66134<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>space</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>preserve<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+           <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>source</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>en<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            But who has any right to find fault with a man who chooses to
+            enjoy a pleasure that has no annoying consequences, or one who
+            avoids a pain that produces no resultant pleasure?
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>source</span><span class="ph token punctuation">&gt;</span></span>
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>target</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>la<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>target</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>trans-unit</span><span class="ph token punctuation">&gt;</span></span>
+        ... etc
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>body</span><span class="ph token punctuation">&gt;</span></span>
+   <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>file</span><span class="ph token punctuation">&gt;</span></span>
+...etc</code></pre>
+      </figure>
+      <figure class="fig fignone" id="example__dita-skeleton-file"><figcaption><span class="fig--title-label">Figure 3. </span>DITA Skeleton File</figcaption>
+        
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>topic</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>cicero<span class="ph token punctuation">"</span></span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>la<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>@@@90122@@@<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>body</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      @@@42094@@@
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      @@@5532@@@
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+      @@@66134@@@
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>body</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>topic</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      </figure>
+    </div>
+  </article>
+</article></main></div></div></body></html>

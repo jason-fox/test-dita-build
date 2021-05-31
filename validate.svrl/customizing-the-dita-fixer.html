@@ -1,0 +1,78 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="keywords" content="ANT, macrodef"><title>DITA Fixer Customization</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="dita-fixer-customization"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">DITA Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Three</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><div class="list-group"><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/usage.html">Usage</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/customizing-the-validator.html">Validator Customization</a><a class="list-group-item list-group-item-action active" href="../validate.svrl/customizing-the-dita-fixer.html">DITA Fixer Customization</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/error-messages.html">Validator Error Messages</a></div><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">DITA Fixer Customization</h1>
+  
+  <div class="body"></div>
+  <article class="topic nested1" aria-labelledby="ariaid-title2" id="adding-a-new-fixable-rule">
+    <h2 class="title" id="ariaid-title2">Adding a new fixable rule</h2>
+    <div class="body">
+      <p class="p">
+         An editable macrofile can be found in <span class="ph filepath">cfg/rulesset/fix-macros.xml</span>.
+         If a rule can be auto fixed, a macro should be added to the file in the
+         following format:
+      </p>
+      <pre class="pre codeblock language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>macrodef</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>rowsep-invalid<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>attribute</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>file<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>attribute</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>path<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>sequential</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>delete-attribute</span> <span class="ph token attr-name">file</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>@{file}<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">path</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>@{path}<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">attr</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>rowsep<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>sequential</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>macrodef</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      <p class="p">
+         Where the <code class="keyword markupname xmlatt">@name</code> of the macro matches the rule <code class="keyword markupname xmlatt">@id</code>.
+         The <code class="keyword markupname xmlatt">@file</code> attribute supplies name of the file to be updated and the <code class="keyword markupname xmlatt">@path</code>
+         attribute supplies the XPath to the invalid element. The DITA file can be
+         updated using <a class="xref" href="http://www.oopsconsultancy.com/software/xmltask/" target="_blank" rel="external noopener">XMLTask</a> which has been supplied as a
+         library. The following convenience functions are also available by default:
+      </p>
+      <ul class="ul">
+        <li class="li">
+<code class="keyword markupname xmlatt">@delete-attribute</code>
+        </li>
+        <li class="li">
+<code class="keyword markupname xmlatt">@delete-element</code>
+        </li>
+        <li class="li">
+<code class="keyword markupname xmlatt">@get-attribute-value</code>
+        </li>
+        <li class="li">
+<code class="keyword markupname xmlatt">@lower-case-attribute</code>
+        </li>
+        <li class="li">
+<code class="keyword markupname xmlatt">@put-attribute-value</code>
+        </li>
+        <li class="li">
+<code class="keyword markupname xmlatt">@replace-with-subelement</code>
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title3" id="amending-a-fixable-rule">
+    <h2 class="title" id="ariaid-title3">Amending a fixable rule</h2>
+    <div class="body">
+      <p class="p">
+         The default functionality applied to fix a broken rule can be amended by
+         altering the macro. If a rule is inactive within the ruleset it will not be fixed.
+      </p>
+    </div>
+  </article>
+</article></main></div></div></body></html>

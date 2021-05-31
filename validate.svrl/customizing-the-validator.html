@@ -1,0 +1,191 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><title>Validator Customization</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="validator-customization"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">DITA Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Three</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><div class="list-group"><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/usage.html">Usage</a><a class="list-group-item list-group-item-action active" href="../validate.svrl/customizing-the-validator.html">Validator Customization</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/customizing-the-dita-fixer.html">DITA Fixer Customization</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../validate.svrl/error-messages.html">Validator Error Messages</a></div><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">Validator Customization</h1>
+  <div class="body"></div>
+  <article class="topic nested1" aria-labelledby="ariaid-title2" id="adding-new-validator-rules">
+    <h2 class="title" id="ariaid-title2">Adding New Validator Rules</h2>
+    <div class="body">
+      <p class="p">
+         This DITA-OT plug-in contains a common ruleset of general validator rules. The
+         ruleset has been designed to be applicable to all documents created by all
+         users. To add new custom rules (which only apply to your specific use case) you
+         should create a separate custom validator plug-in which extends the base
+         validator. See the sample <a class="xref" href="https://github.com/jason-fox/com.here.validate.svrl.overrides" target="_blank" rel="external noopener">Extended DITA Validator</a> as an example of
+         how to do this.
+      </p>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title3" id="altering-the-severity-of-a-validator-rule">
+    <h2 class="title" id="ariaid-title3">Altering the severity of a validator rule</h2>
+    <div class="body">
+      <p class="p">
+         The severity of a validator rule can be altered by amending entries in the
+         <code class="ph codeph language-markup">cfg/rulesset/default.xml</code> file The plug-in supports four
+         severity levels:
+      </p>
+      <ul class="ul">
+        <li class="li">
+           <strong class="ph b">FATAL</strong> - Fatal rules will fail validation and cannot be overridden.
+        </li>
+        <li class="li">
+           <strong class="ph b">ERROR</strong> - Error rules will fail validation. Errors can be overridden as
+           described above.
+        </li>
+        <li class="li">
+           <strong class="ph b">WARNING</strong> - Warning rules will display a warning on validation, but do not
+           fail the validation. Warnings can also be individually overridden.
+        </li>
+        <li class="li">
+           <strong class="ph b">INACTIVE</strong> - Inactive rules are not applied.
+        </li>
+      </ul>
+      <p class="p">
+         A custom ruleset file can be passed into the plug-in using the
+         <span class="keyword parmname">svrl.ruleset.file</span> parameter
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">svrl-echo</span> <span class="keyword parmname">--input</span> document.ditamap -D<span class="keyword parmname">svrl.ruleset.file</span><span class="ph token operator">=</span>PATH_TO_CUSTOM/ruleset.xml</code></pre>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title4" id="ignoring-validator-rules">
+    <h2 class="title" id="ariaid-title4">Ignoring Validator Rules</h2>
+    <div class="body">
+      <section class="section" id="ignoring-validator-rules__removing-validator-rules-globally"><h3 class="title">Removing validator rules globally</h3>
+        
+        <p class="p">
+           Rules can be made inactive by altering the severity (see above). Alternatively a
+           rule can be commented out in the XSL.
+        </p>
+        <p class="p">
+           To completely remove rules which do not apply to your document set, you can
+           create a customized DITA-OT plug-in which extends the base validator. See the
+           <a class="xref" href="https://github.com/jason-fox/com.here.validate.svrl.overrides" target="_blank" rel="external noopener">Extended DITA Validator</a> as an example of
+           how to do this.
+        </p>
+      </section>
+      <section class="section" id="ignoring-validator-rules__ignoring-a-validator-rule-throughout-a-document"><h3 class="title">Ignoring a validator rule throughout a document</h3>
+        
+        <p class="p">
+           Individual rules can be ignored by adding the <span class="keyword parmname">args.validate.ignore.rules</span>
+           parameter to the command line. The value of the parameter should be a
+           comma-delimited list of each <code class="ph codeph language-markup">rule-id</code> to ignore.
+        </p>
+        <p class="p">
+           For example to ignore the <code class="ph codeph language-markup">table-id-missing</code> validation rule
+           within a document you would run:
+        </p>
+        <pre class="pre codeblock language-bash scale-80"><code>PATH_TO_DITA_OT/dita -f <span class="keyword option">svrl-echo</span> <span class="keyword parmname">--input</span> document.ditamap -D<span class="keyword parmname">args.validate.ignore.rules</span><span class="ph token operator">=</span>table-id-missing</code></pre>
+      </section>
+      <section class="section" id="ignoring-validator-rules__ignoring-a-specific-instance-of-a-validator-rule"><h3 class="title">Ignoring a specific instance of a validator rule</h3>
+        
+        <p class="p">
+           Specific instances of a rule can be ignored by adding a comment within the <code class="ph codeph language-markup">*.dita</code>
+           file. The comment should start with <code class="ph codeph language-markup">ignore-rule</code>, and needs to
+           be added at the location where the error is flagged.
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code>..
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>table</span> <span class="ph token attr-name">platform</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>pdfonly<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">frame</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>none<span class="ph token punctuation">"</span></span> <span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token comment">&lt;!-- ignore-rule:table-id-missing --&gt;</span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tgroup</span> <span class="ph token attr-name">cols</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>colspec</span> <span class="ph token attr-name">colname</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>c1<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">colnum</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">colwidth</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>336pt<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+            <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+                <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span><span class="ph token entity">&amp;amp;</span>#xA0;<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+            <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tgroup</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>table</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+        <p class="p">
+           Some rules such as <strong class="ph b">FIXME</strong> and <strong class="ph b">TODO</strong> in the running text need to be
+           double escaped as shown below:
+        </p>
+        <ul class="ul">
+          <li class="li">
+             Add a comment line with the text <code class="ph codeph language-markup">ignore-rule:running-text-*</code> to
+             ignore the issue flagged in the text below (no FIXMEs allowed in the running text)
+          </li>
+          <li class="li">
+             Add the <code class="ph codeph language-markup">comment-*</code> to the list of ignored rules to ignore the
+             fact that the comment itself fails an additional rule (no FIXMEs allowed in
+             the comments)
+          </li>
+        </ul>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token comment">&lt;!--
+    We want to display the text below which would usually
+    result in a warning
+--&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token comment">&lt;!-- ignore-rule:running-text-fixme,comment-fixme --&gt;</span>
+    FIXME is usually banned in the running text.
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      </section>
+      <section class="section" id="ignoring-validator-rules__ignoring-all-warnings-within-a-block"><h3 class="title">Ignoring all warnings within a block</h3>
+        
+        <p class="p">
+           A block of DITA can be excluded from firing all rules at <strong class="ph b">WARNING</strong> level by
+           adding the comment <code class="ph codeph language-markup">ignore-all-warnings</code> to the block. This is
+           especially useful to avoid false positive TODO warnings for text which is in
+           Spanish.
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token comment">&lt;!--
+    We want to display the Spanish text below which would usually
+    result in a series of warnings for the word TODOS
+--&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name"><span class="ph token namespace">xml:</span>lang</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>es-es<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>legal-es<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token comment">&lt;!-- ignore-all-warnings --&gt;</span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Avisos legales<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+        © 2017 <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>keyword</span> <span class="ph token attr-name">keyref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>brand-name<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span> Global B.V. Todos los derechos reservados.
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>
+        Este material, incluidos la documentación y los programas informáticos relacionados, está protegido por derechos de autor controlados
+        por <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>keyword</span> <span class="ph token attr-name">keyref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>brand-name<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>. Todos los derechos están reservados. La copia, incluidos la reproducción, almacenamiento,
+        adaptación o traducción de una parte o de todo este material requiere el consentimiento por escrito de <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>keyword</span> <span class="ph token attr-name">keyref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>brand-name<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>.
+        Este material también contiene información confidencial, que no se puede revelar a otras personas sin el consentimiento previo y
+        por escrito de <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>keyword</span> <span class="ph token attr-name">keyref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>brand-name<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>.
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      </section>
+      <section class="section" id="ignoring-validator-rules__ignoring-all-errors-within-a-block"><h3 class="title">Ignoring all errors within a block</h3>
+        
+        <p class="p">
+           A block of DITA can be excluded from firing all rules at <strong class="ph b">ERROR</strong> level by
+           adding the comment <code class="ph codeph language-markup">ignore-all-errors</code> to the block. This is
+           useful to avoid issues with generated DITA files which are parsable DITA, but
+           which may not satisfy in-house validation style rules.
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="ph token comment">&lt;!-- THIS TOPIC IS GENERATED --&gt;</span>
+<span class="ph token doctype">&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>topic</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>generated-topic<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">other-props</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>generated<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token comment">&lt;!-- ignore-all-warnings, ignore-all-errors --&gt;</span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Topic title<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>body</span><span class="ph token punctuation">&gt;</span></span>
+        Generated Content goes here...
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>body</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>topic</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+        <p class="p">
+           Rules set at <strong class="ph b">FATAL</strong> level cannot be ignored.
+        </p>
+      </section>
+    </div>
+  </article>
+</article></main></div></div></body></html>

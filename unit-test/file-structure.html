@@ -1,0 +1,227 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><title>Unit Test File Structure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="unit-test-file-structure"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">DITA Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Three</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><div class="list-group"><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/usage.html">Usage</a><a class="list-group-item list-group-item-action active" href="../unit-test/file-structure.html">Unit Test File Structure</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/api.html">Unit Testing ANT Tasks</a></div><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">Unit Test File Structure</h1>
+  <div class="body">
+    <p class="p">
+       The unit tests are organized in the following manner:
+    </p>
+    <pre class="pre codeblock language-none scale-80"><code>├── test-suite-A
+│   └── test
+│       ├── unit-test-1
+│       ├── unit-test-2
+│       ├── ... etc
+│       ├── bootstrap.xml
+│       └── coverage.xml
+│
+├── test-suite-B
+│   └── test
+│       ├── unit-test-1
+│       ├── unit-test-2
+│       ├── ... etc
+│       ├── bootstrap.xml
+│       └── coverage.xml</code></pre>
+    <p class="p">
+       Each suite of tests (identified by a directory called <span class="ph filepath">test</span>)
+       can be found in a separate directory. Each test within the suite can be found
+       in a separate sub-directory. A <code class="ph codeph language-markup">coverage.xml</code> file should be
+       added to each test suite to enable the framework to calculate coverage.
+    </p>
+    <p class="p">
+       This structure means that an integration test of multiple plug-ins can be run by
+       adding a <span class="ph filepath">test</span> directory to each plug-in and invoking the
+       tests as shown:
+    </p>
+    <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">unit-test</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> ./plugins
+    </code></pre>
+  </div>
+  <article class="topic nested1" aria-labelledby="ariaid-title2" id="test-suite-files">
+    <h2 class="title h3 mt-3" id="ariaid-title2">Test suite files</h2>
+    <div class="body">
+      <section class="section" id="test-suite-files__bootstrap.xml-file"><h3 class="title h4 mt-3"><code class="ph codeph language-markup">bootstrap.xml</code> file
+        </h3>
+         
+        <p class="p">
+           At the root of the tests lies a <code class="ph codeph language-markup">bootstrap.xml</code> file which
+           references the <code class="ph codeph language-markup">antlib.xml</code> library as shown:
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>project</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>bootstrap.unit-test<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>dirname</span> <span class="ph token attr-name">property</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>test.root.dir<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">file</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>${ant.file.bootstrap.unit-test}/..<span class="ph token punctuation">"</span></span> <span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>property</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>dita.dir<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">location</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>PATH_TO_DITA_OT<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>typedef</span> <span class="ph token attr-name">file</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>${dita.dir}/plugins/fox.jason.unit-test/resource/antlib.xml<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>project</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+        <ul class="ul">
+          <li class="li">
+             The location of <span class="keyword parmname">test.root.dir</span> must be set - this allows the
+             expecation of a single test to be updated directly from the command line
+             independently of the test harness.
+          </li>
+          <li class="li">
+             The location of <span class="keyword parmname">dita.dir</span> must be set - this allows a single
+             test to be run directly from the command line independently of the test harness.
+          </li>
+          <li class="li">
+             The functions from the unit-test <code class="ph codeph language-markup">antlib.xml</code> must be loaded
+             using the <code class="keyword markupname xmlelement">&lt;typedef&gt;</code> task.
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="test-suite-files__coverage.xml-file"><h3 class="title h4 mt-3"><code class="ph codeph language-markup">coverage.xml</code> file
+        </h3>
+         
+        <p class="p">
+           A token coverage file consists of a list of XML elements or string literals
+           which should be present in a test-suite’s outputs. For example, PDF tests
+           should cover all possible fop element and attributes.
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>package</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>org.dita.pdf2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>lines</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>line</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>plain-text<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>font-family="STANDARD"<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>line</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>line</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>monospace-text<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>font-family="MONOSPACE"<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>line</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>lines</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>elements</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>element</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>codeblock<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>fo:block font-family="MONOSPACE"<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>element</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>element</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>codeph-tt<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>fo:inline font-family="MONOSPACE"<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>element</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>element</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>colspec<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>fo:table-column<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>element</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>element</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>colspec-width<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>fo:table-column column-width<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>element</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>elements</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>package</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      </section>
+      <section class="section" id="test-suite-files__template-coverage.xml-file"><h3 class="title h4 mt-3"><code class="ph codeph language-markup">template-coverage.xml</code> file
+        </h3>
+         
+        <p class="p">
+           An XSL coverage file consists of a list of XSL elements which are present within
+           a plug-in. This file is generated by the <span class="keyword option">xsl-instrument</span> transform
+        </p>
+        <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>package</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>fox.jason.unit-test<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>classes</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>class</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>xsl/order<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">filename</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>xsl/order.xsl<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>lines</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>line</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>d6e3:xsl/order.xsl<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">element</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>xsl:template<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">open</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>true<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">indent</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">branch</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>false<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">attributes</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>match=<span class="ph token entity">&amp;amp;</span>#34;/<span class="ph token entity">&amp;amp;</span>#34;<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">number</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>13<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>d6e3:xsl/order.xsl<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>line</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>line</span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>d6e3:xsl/order.xsl<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">element</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>xsl:apply-templates<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">open</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>true<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">indent</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">branch</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>false<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">attributes</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>select=<span class="ph token entity">&amp;amp;</span>#34;//failed-assert<span class="ph token entity">&amp;amp;</span>#34;<span class="ph token punctuation">"</span></span>
+              <span class="ph token attr-name">number</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>19<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
+      </section>
+      <section class="section" id="test-suite-files__disabled.txt-file"><h3 class="title h4 mt-3"><code class="ph codeph language-markup">disabled.txt</code> file
+        </h3>
+         
+        <p class="p">
+           If a <code class="ph codeph language-markup">disabled.txt</code> file is present within a test suite
+           directory, none of the tests within the directory will be run.
+        </p>
+      </section>
+      <section class="section" id="test-suite-files__overrides-for-attributes.xml-colors.xml-and-fonts.xml"><h3 class="title h4 mt-3">Overrides for <code class="ph codeph language-markup">attributes.xml</code>,
+         <code class="ph codeph language-markup">colors.xml</code> and <code class="ph codeph language-markup">fonts.xml</code>
+        </h3>
+         
+        <p class="p">
+           The <code class="ph codeph language-markup">cfg</code> directory of the plug-in holds standard lists of fonts,
+           colors and attributes to replace when running PDF tests - this can be
+           overridden by individuals test or test suites if necessary by placing an
+           equivalent override file in the test directory or test-suite directory.
+        </p>
+      </section>
+      <section class="section" id="test-suite-files__overrides-for-test.properties"><h3 class="title h4 mt-3">Overrides for <code class="ph codeph language-markup">test.properties</code>
+        </h3>
+         
+        <p class="p">
+           Additional test properties can be passed to DITA-OT when each test is run if a
+           <code class="ph codeph language-markup">test.properties</code> file is present in the test directory or
+           test-suite directory. The name of the file to search for can also be altered.
+           See <a class="xref" href="http://www.dita-ot.org/3.0/topics/using-dita-properties-file.html" target="_blank" rel="external noopener">Setting build parameters with <code class="ph codeph language-markup">.properties</code>
+           files</a> for more details.
+        </p>
+      </section>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title3" id="individual-test-files">
+    <h2 class="title h3 mt-3" id="ariaid-title3">Individual test files</h2>
+    <div class="body">
+      <p class="p">
+         Each unit test is organized in the following manner:
+      </p>
+      <pre class="pre codeblock language-none scale-80"><code>├── build.xml
+├── document.ditamap
+├── expected.html
+├── test.properties (optional)
+└── topics
+    └── *.dita files</code></pre>
+      <ul class="ul">
+        <li class="li">
+           An ANT <code class="ph codeph language-markup">build.xml</code> file to invoke the test
+        </li>
+        <li class="li">
+           A <code class="ph codeph language-markup">document.ditamap</code> referring to the individual <code class="ph codeph language-markup">*.dita</code> files
+        </li>
+        <li class="li">
+           An optional <code class="ph codeph language-markup">test.properties</code> file if passing any additional
+           properties to DITA-OT
+        </li>
+        <li class="li">
+           A test expectation (usually called <code class="ph codeph language-markup">expected.html</code> or
+           <code class="ph codeph language-markup">expected.fo</code>)
+        </li>
+        <li class="li">
+           Any further <code class="ph codeph language-markup">*.dita</code> files or source files, graphics etc.
+           required for the test.
+        </li>
+      </ul>
+      <p class="p">
+         The <code class="ph codeph language-markup">build.xml</code> must consist of a single default target, and <code class="ph codeph language-markup">import</code>
+         the <code class="ph codeph language-markup">bootstrap.xml</code> file as shown. The <code class="ph codeph language-markup">description</code>
+         is used within the test report.
+      </p>
+      <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>project</span> <span class="ph token attr-name">basedir</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>.<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">default</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>unit-test<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>import</span> <span class="ph token attr-name">file</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>../../bootstrap.xml<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>description</span><span class="ph token punctuation">&gt;</span></span>
+    Body text should be displayed in the standard font
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>description</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>target</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>unit-test<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-html5</span><span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>get-html-article</span> <span class="ph token attr-name">from</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>topics/body-text.html<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>compare-output</span> <span class="ph token attr-name">suffix</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>.html<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>target</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>project</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+      <ul class="ul">
+        <li class="li">
+           An individual test can be run directly from the command line by running the
+           default target.
+        </li>
+        <li class="li">
+           Adding the comment <code class="ph codeph language-markup"><span class="ph token comment">&lt;!-- @disabled --&gt;</span></code> within the <code class="ph codeph language-markup">build.xml</code>
+           file will disable a test
+        </li>
+      </ul>
+    </div>
+  </article>
+</article></main></div></div></body></html>

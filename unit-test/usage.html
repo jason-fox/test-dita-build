@@ -1,0 +1,404 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="keywords" content="GitHub Actions, coverage, unit-testing, continuous integration, Travis CI, Coveralls"><title>Usage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"><link rel="stylesheet" type="text/css" href="../common-extended.css"></head><body id="usage"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">DITA Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Three</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><div class="list-group"><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/install.html">Install</a><a class="list-group-item list-group-item-action active" href="../unit-test/usage.html">Usage</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/file-structure.html">Unit Test File Structure</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../unit-test/api.html">Unit Testing ANT Tasks</a></div><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">Usage</h1>
+  <div class="body">
+    <div role="alert" class="note alert alert-success"><span class="note__title">Tip:</span> 
+      <p class="p">
+         A series of test suites can be found within the plug-in at
+         <code class="ph codeph language-markup">PATH_TO_DITA_OT/plugins/fox.jason.unit-test/sample</code>
+      </p>
+    </div>
+    <section class="section" id="usage__obtaining-a-unit-test-report"><h2 class="title h4 mt-3">Obtaining a unit test report</h2>
+      
+      <p class="p">
+         To run, use the <span class="keyword option">unit-test</span> transform.
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">unit-test</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--output</span> out <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_UNIT_TESTS</code></pre>
+      <p class="p">
+         Once the command has run, a test report file is created. Additionally, if any
+         error occurs, the command will fail.
+      </p>
+      <p class="p">
+         <strong class="ph b">Sample Test Report</strong> This is the test report from the example tests found
+         within the plug-in <code class="ph codeph language-markup">sample</code> directory. Nine tests are run over
+         two test suites (PDF and HTML processing) - a third test suite has been disabled.
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/results.png" alt="">
+      </p>
+      <ul class="ul">
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is a test suite, all tests
+           within the suite will be run.
+        </li>
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is not a test suite, all
+           test suites directly beneath that directory will be run.
+        </li>
+      </ul>
+    </section>
+    <section class="section" id="usage__xslt-coverage-report"><h2 class="title h4 mt-3">XSLT Coverage Report</h2>
+      
+      <p class="p">
+         To run a XSLT Coverage Report, each DITA-OT Plug-In must be <strong class="ph b">instrumented</strong>
+         - this annotates the XSLT templates within the plugin to be able to generate
+         coverage information. A copy of each <code class="ph codeph language-markup">*.xsl</code> file is also saved
+         with the <code class="ph codeph language-markup">*.orig</code> suffix.
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xsl-instrument</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_PLUG_IN</code></pre>
+      <p class="p">
+         To revert back to the original files just run the de-instrument transform as shown:
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xsl-deinstrument</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_PLUG_IN</code></pre>
+      <p class="p">
+         Once a Plug-In has been <strong class="ph b">instrumented</strong> the test suite should contain a
+         <code class="ph codeph language-markup">template-coverage.xml</code> file which holds a list of all template
+         decision points. To obtain coverage information, use the <span class="keyword option">unit-test</span>
+         transform as stated previously:
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">unit-test</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_UNIT_TESTS</code></pre>
+      <ul class="ul">
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is a test suite, XSL
+           coverage for that test suite will be reported.
+        </li>
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is not a test suite, XSL
+           coverage for all test suites directly beneath that directory will be reported.
+        </li>
+      </ul>
+      <p class="p">
+         Once the command has run, both a test report file and an XSL coverage report
+         file are created. Additionally, if any error occurs, the command will fail.
+      </p>
+      <p class="p">
+         It is also possible to run XSL coverage over a single test. An individual test
+         can be run directly from the command line by running the default target within
+         that test. This can be followed by direct invocation of the coverage report
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">ant</span> <span class="keyword parmname">-f</span> PATH_TO_PLUGIN/test/TEST_NAME/build.xml
+<span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xsl-report</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_PLUGIN</code></pre>
+    </section>
+    <section class="section" id="usage__sample-xsl-report"><h2 class="title h4 mt-3">Sample XSL Report</h2>
+      
+      <p class="p">
+         The XSL coverage report will show a schematic of all template decision points,
+         with covered lines displayed in green, and uncovered lines displayed in red.
+      </p>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>XSL coverage</figcaption>
+        
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/xsl-coverage.png" alt="">
+      </figure>
+    </section>
+    <section class="section" id="usage__token-coverage-report"><h2 class="title h4 mt-3">Token Coverage Report</h2>
+      
+      <p class="p">
+         This is a quicker alternative report to XSLT instrumentation and code coverage,
+         but it requires the developer to create the token <code class="ph codeph language-markup">coverage.xml</code>
+         file manually. Each test suite should contain a <code class="ph codeph language-markup">coverage.xml</code>
+         file which holds a series of tokens representing all potential output values.
+         To obtain coverage information, use the <span class="keyword option">token-report</span> transform.
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">token-report</span> <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> PATH_TO_UNIT_TESTS</code></pre>
+      <p class="p">
+         Once the command has run, a coverage report is created
+      </p>
+    </section>
+    <section class="section" id="usage__sample-token-report"><h2 class="title h4 mt-3">Sample Token Report</h2>
+      
+      <p class="p">
+         This is the token report from the example tests found within the plug-in
+         <code class="ph codeph language-markup">sample</code> directory.
+      </p>
+      <ul class="ul">
+        <li class="li">
+           Coverage for the Spell-checker is looking to ensure that all rules have been
+           run. Uncovered rules are highlighted in RED.
+        </li>
+        <li class="li">
+           Coverage for HTML processing is looking for the presence of <code class="keyword markupname xmlelement">&lt;codeph&gt;</code>,
+           <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code> and <code class="keyword markupname xmlelement">&lt;p&gt;</code> tags being
+           rendered in the tests.
+        </li>
+      </ul>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>Token report</figcaption>
+        
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/coverage.png" alt="">
+      </figure>
+      <ul class="ul">
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is a test suite, coverage
+           for that test suite will be reported.
+        </li>
+        <li class="li">
+           If the <span class="keyword parmname">--input</span> input directory is not a test suite,
+           coverage for all test suites directly beneath that directory will be reported.
+        </li>
+      </ul>
+    </section>
+    <section class="section" id="usage__obtaining-ant-script-profile-information"><h2 class="title h4 mt-3">Obtaining ANT script profile information</h2>
+      
+      <p class="p">
+         <strong class="ph b">Antro</strong> is a hierarchical and line-level profiler for Ant build scripts. It
+         can be run to check which ANT scripts have been invoked and how long they took.
+      </p>
+      <p class="p">
+         To obtain profile information, use the <span class="keyword option">antro</span> transform and
+         supply an additional test transtype
+      </p>
+      <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">antro</span> <span class="keyword parmname">--test.transform</span><span class="ph token operator">=</span>TRANSFORM_TO_PROFILE <span class="ph token punctuation">\</span>
+     <span class="keyword parmname">--input</span> document.ditamap</code></pre>
+      <p class="p">
+         A profiler JSON file will be generated.
+      </p>
+    </section>
+    <section class="section" id="usage__viewing-profiler-information"><h2 class="title h4 mt-3">Viewing profiler information</h2>
+      
+      <p class="p">
+         To run the UI for the Antro profiler, use the <span class="keyword option">antro-ui</span>
+         transform. The <span class="keyword parmname">--input</span> parameter is mandatory for all
+         DITA-OT plug-ins, and should point to a real file, but is not used for this
+         transform.
+      </p>
+      <pre class="pre codeblock language-markup"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">antro-ui</span> \
+     <span class="keyword parmname">--input</span> document.ditamap</code></pre>
+      <p class="p">
+         The Antro UI is the displayed, load the profiler json file from to display a bar
+         graph showing how long each ANT target took:
+      </p>
+      <p class="p">
+         <strong class="ph b">Sample Antro Display</strong> The Profiler was run against the <span class="keyword option">pdf</span>
+         transform, FOP processing took 16s
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/profiler-bar.png" alt="">
+      </p>
+      <p class="p">
+         You can drill down to an individual line to see if it has been invoked and how
+         long it took:
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/profiler.png" alt="">
+      </p>
+    </section>
+    <section class="section" id="usage__parameter-reference"><h2 class="title h4 mt-3">Parameter Reference</h2>
+      
+      
+      
+      
+      
+      <ul class="ul">
+        <li class="li">
+           <span class="keyword parmname">test.colorize</span> - When set, successes and failures are output
+           highlighted using ANSI color codes
+        </li>
+        <li class="li">
+           <span class="keyword parmname">test.copy</span> - Specifies whether regenerated expecations
+           should be copied. Default is <span class="keyword option">false</span>
+        </li>
+        <li class="li">
+           <span class="keyword parmname">test.transtype</span> - The real transtype to run the antro
+           profiler against
+        </li>
+        <li class="li">
+           <span class="keyword parmname">test.propertyfile</span> - A properties file to use when running
+           the unit tests or antro profiler
+        </li>
+      </ul>
+    </section>
+  </div>
+  <article class="topic nested1" aria-labelledby="ariaid-title2" id="integration-with-github-actions.">
+    <h2 class="title" id="ariaid-title2">Integration with GitHub Actions.</h2>
+    
+    <div class="body">
+      <img class="image float-start mt-1 me-3" src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" height="55">
+      <p class="p">
+         <strong class="ph b">GitHub Actions</strong> are a CI/CD environment integrated directly with GitHub.
+         More information about how to set up GitHub Actions can be found on the <a class="xref" href="https://docs.github.com/en/free-pro-team@latest/actions" target="_blank" rel="external noopener">GitHub website</a>
+      </p>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 3. </span>GitHub Actions</figcaption>
+        
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/github-actions.png" alt="">
+      </figure>
+      <p class="p">
+         A GitHub Action has been created to automate your <a class="xref" href="https://github.com/jason-fox/dita-unit-test-action" target="_blank" rel="external noopener">DITA-OT Plugin testing</a>. To add automated CI/CD testing
+         of your DITA-OT plug-ins, place your tests under a <code class="ph codeph language-markup">test</code>
+         directory under the root of the repository along with the <code class="ph codeph language-markup">ci.yml</code>
+         in the <span class="ph filepath">.github/workflows</span> directory.
+      </p>
+      <pre class="pre codeblock language-yaml scale-80"><code><span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> CI
+<span class="ph token key atrule">'on'</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">push</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">branches</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> master
+  <span class="ph token key atrule">pull_request</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">branches</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> master
+<span class="ph token key atrule">jobs</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">unit-test</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Unit Tests
+    <span class="ph token key atrule">runs-on</span><span class="ph token punctuation">:</span> ubuntu<span class="ph token punctuation">-</span>latest
+    <span class="ph token key atrule">steps</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Git checkout
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/checkout@v2
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Run DITA<span class="ph token punctuation">-</span>OT Unit Test
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> jason<span class="ph token punctuation">-</span>fox/dita<span class="ph token punctuation">-</span>unit<span class="ph token punctuation">-</span>test<span class="ph token punctuation">-</span>action@master
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <span class="ph token key atrule">plugin</span><span class="ph token punctuation">:</span> <span class="ph token string">'com.oxygenxml.editlink'</span></code></pre>
+      <ul class="ul">
+        <li class="li">
+           <span class="keyword parmname">plugin</span> - <strong class="ph b">Required</strong> The name of the DITA-OT plugin to
+           install and test.
+        </li>
+        <li class="li">
+           <span class="keyword parmname">setup-script</span> - The name of an optional bash script to run
+           to install any dependencies prior to run the test. Defaults to <code class="ph codeph language-markup">test-setup.sh</code>
+           if not supplied.
+        </li>
+        <li class="li">
+           <span class="keyword parmname">prerequisites</span> - Comma separated list of additional DITA-OT
+           plugins to install prior to installing the plugin under test.
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title3" id="integration-with-travis-ci">
+    <h2 class="title" id="ariaid-title3">Integration with Travis CI</h2>
+    
+    <div class="body">
+      <img class="image float-start mt-1 me-3" src="https://www.libtom.net/images/TravisCI-Full-Color-45e242791b7752b745a7ae53f265acd4.png" height="55">
+      <p class="p">
+         <strong class="ph b">Travis CI</strong> is a hosted, distributed continuous integration service used to
+         build and test software projects hosted at GitHub. More information about how
+         to set up travis integration can be found on the <a class="xref" href="https://docs.travis-ci.com/" target="_blank" rel="external noopener">travis website</a>.
+      </p>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 4. </span>Travis</figcaption>
+        
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/travis.png" alt="">
+      </figure>
+      <p class="p">
+         For automated testing of DITA-OT plug-ins, place your tests under a <code class="ph codeph language-markup">test</code>
+         directory under the root of the repository along with the <code class="ph codeph language-markup">.travis.yml</code>
+         in the root itself.
+      </p>
+      <p class="p">
+         For example to test against DITA-OT 3.1 and DITA-OT 2.5.4, use the following
+         <code class="ph codeph language-markup">.travis.yml</code>:
+      </p>
+      <pre class="pre codeblock language-yml scale-80"><code><span class="ph token key atrule">language</span><span class="ph token punctuation">:</span> java
+<span class="ph token key atrule">jdk</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> oraclejdk8
+<span class="ph token key atrule">env</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> DITA_OT=3.1
+    <span class="ph token punctuation">-</span> DITA_OT=2.5.4
+<span class="ph token key atrule">before_script</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">zip</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>r</span> PLUGIN<span class="ph token punctuation">-</span>NAME.zip . <span class="keyword parmname"><span class="ph token punctuation">-</span>x</span> *.zip* *.git/* <span class="ph token important">*temp</span>/* <span class="ph token important">*out</span>/*
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">curl</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>LO</span> https<span class="ph token punctuation">:</span>//github.com/dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>ot/releases/download/$DITA_OT/dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">unzip</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>q</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">mv</span> dita<span class="ph token punctuation">-</span>ot*/ dita<span class="ph token punctuation">-</span>ot/
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">chmod</span> <span class="keyword parmname">+x</span> dita<span class="ph token punctuation">-</span>ot/bin/dita
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot/bin/dita</span> <span class="keyword parmname">install</span> https<span class="ph token punctuation">:</span>//github.com/jason<span class="ph token punctuation">-</span>fox/fox.jason.unit<span class="ph token punctuation">-</span>test/archive/master.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot/bin/dita</span> <span class="keyword parmname">install</span> PLUGIN<span class="ph token punctuation">-</span>NAME.zip
+<span class="ph token key atrule">script</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot/bin/dita</span> <span class="keyword parmname"><span class="ph token punctuation">-</span><span class="ph token punctuation">-</span>input</span> dita<span class="ph token punctuation">-</span>ot/plugins/PLUGIN<span class="ph token punctuation">-</span>NAME <span class="keyword parmname"><span class="ph token punctuation">-</span><span class="ph token punctuation">-</span>format</span> <span class="keyword option">unit<span class="ph token punctuation">-</span>test</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>v</span></code></pre>
+      <p class="p">
+         This will do the following:
+      </p>
+      <ul class="ul">
+        <li class="li">
+           Zip up the files in the plugin under test
+        </li>
+        <li class="li">
+           install the specified DITA-OT version
+        </li>
+        <li class="li">
+           install the unit-testing framework (repeat this for other dependencies)
+        </li>
+        <li class="li">
+           install the plugin under test
+        </li>
+        <li class="li">
+           Run the tests
+        </li>
+      </ul>
+      <p class="p">
+         Unit tests will be run whenever a commit occurs.
+      </p>
+      <p class="p">
+         The output will appear within the log as follows:
+      </p>
+      <pre class="pre codeblock language-none scale-80"><code>[UNIT002I][INFO] Running tests for 'PLUGIN-NAME'
+  [antunit] Build File: /tmp/temp20180420185923919/unit-test/fixtures/PLUGIN-NAME/fixture.xml
+  [antunit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 31.063 sec
+  [antunit] Target: test:    Expect that ...  took 7.202 sec
+  [antunit] Target: test:    Expect that ...  took 17.596 sec
+...etc
+
+[SUCCESS] All tests have passed
+dita2unit-test:
+clean-temp:
+The command "dita-ot/bin/dita --input dita-ot/plugins/PLUGIN-NAME -f unit-test -v" exited with 0.</code></pre>
+    </div>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title4" id="integration-with-coveralls">
+    <h2 class="title" id="ariaid-title4">Integration with Coveralls</h2>
+    
+    <div class="body">
+      <img class="image float-start mt-1 me-3" src="https://www.libtom.net/images/coveralls-bd6b762f7cf724a89de199133db5868f.png" height="55">
+      <p class="p">
+         <strong class="ph b">Coveralls</strong> is a web service to help you track your code coverage over
+         time, and ensure that all your new code is fully covered. More information
+         about how to set up coveralls-travis integration can be found on the <a class="xref" href="https://docs.coveralls.io/" target="_blank" rel="external noopener">travis website</a>.
+      </p>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 5. </span>Coveralls</figcaption>
+        
+        <img class="image img-fluid img-thumbnail" src="https://jason-fox.github.io/fox.jason.unit-test/coveralls.png" alt="">
+      </figure>
+      <p class="p">
+         If a plug-in has been instrumented (using the <span class="keyword option">xsl-instrument</span>
+         transform) and unit tests are run, a cobertura style <code class="ph codeph language-markup">coverage.xml</code>
+         file will be created along with the test results and a coverage report. This
+         can be forwared to Coveralls using the standard maven plug-in as shown:
+      </p>
+      <pre class="pre codeblock language-yaml scale-80"><code><span class="ph token key atrule">language</span><span class="ph token punctuation">:</span> java
+<span class="ph token key atrule">jdk</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> oraclejdk8
+<span class="ph token key atrule">env</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> DITA_OT=3.1
+    <span class="ph token punctuation">-</span> DITA_OT=2.5.4
+<span class="ph token key atrule">before_script</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">zip</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>r</span> PLUGIN<span class="ph token punctuation">-</span>NAME.zip . <span class="keyword parmname"><span class="ph token punctuation">-</span>x</span> *.zip* *.git/* <span class="ph token important">*temp</span>/* <span class="ph token important">*out</span>/*
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">curl</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>LO</span> https<span class="ph token punctuation">:</span>//github.com/dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>ot/releases/download/$DITA_OT/dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">unzip</span> <span class="keyword parmname"><span class="ph token punctuation">-</span>q</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">chmod</span> <span class="keyword parmname">+x</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/bin/dita
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/bin/dita</span> <span class="keyword parmname">install</span> https<span class="ph token punctuation">:</span>//github.com/jason<span class="ph token punctuation">-</span>fox/fox.jason.unit<span class="ph token punctuation">-</span>test/archive/master.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/bin/dita</span> <span class="keyword parmname">install</span> PLUGIN<span class="ph token punctuation">-</span>NAME.zip
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/bin/dita</span> <span class="keyword parmname"><span class="ph token punctuation">-</span><span class="ph token punctuation">-</span>input</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/plugins/PLUGIN<span class="ph token punctuation">-</span>NAME <span class="ph token punctuation">-</span>f <span class="keyword option">xsl<span class="ph token punctuation">-</span>instrument</span>
+<span class="ph token key atrule">script</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/bin/dita</span> <span class="keyword parmname"><span class="ph token punctuation">-</span><span class="ph token punctuation">-</span>input</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/plugins/PLUGIN<span class="ph token punctuation">-</span>NAME <span class="ph token punctuation">-</span>f <span class="keyword option">unit<span class="ph token punctuation">-</span>test</span> <span class="keyword parmname"><span class="ph token punctuation">-</span><span class="ph token punctuation">-</span>output</span> . <span class="keyword parmname"><span class="ph token punctuation">-</span>v</span>
+<span class="ph token key atrule">after_success</span><span class="ph token punctuation">:</span>
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">cp</span> dita<span class="ph token punctuation">-</span>ot<span class="ph token punctuation">-</span>$DITA_OT/plugins/fox.jason.unit<span class="ph token punctuation">-</span>test/resource/pom.xml pom.xml
+    <span class="ph token punctuation">-</span> <span class="keyword cmdname">mvn</span> clean org.eluder.coveralls<span class="ph token punctuation">:</span>coveralls<span class="ph token punctuation">-</span>maven<span class="ph token punctuation">-</span>plugin<span class="ph token punctuation">:</span>report</code></pre>
+    </div>
+  </article>
+</article></main></div></div></body></html>
