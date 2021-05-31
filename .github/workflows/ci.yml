@@ -9,6 +9,8 @@ jobs:
     name: Build DITA
     runs-on: ubuntu-latest
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
       - name: Build Bootstrap ⚙️
         uses: dita-ot/dita-ot-action@master
         with:
@@ -22,7 +24,7 @@ jobs:
             https://github.com/jason-fox/dita-bootstrap/archive/feature/bootstrap-5.0.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build: |
-            dita -i /github/workspace/document.ditamap -o /github/workspace/out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
+            dita -i ${GITHUB_WORKSPACE}/document.ditamap -o ${GITHUB_WORKSPACE}/out/html -f html5-bootstrap --nav-toc partial --args.rellinks none
       - name: Build PDF 🖨️
         uses: dita-ot/dita-ot-action@master
         with:
