@@ -32,7 +32,7 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: out/html # The folder the action should deploy.
       - name: Build PDF 🖨️
-        uses: dita-ot/dita-ot-action@master
+        uses: jason-fox/dita-ot-action@feature/project-file
         with:
           install: |
             apt-get update -q
@@ -42,7 +42,7 @@ jobs:
           plugins: |
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-          build: dita --project=${GITHUB_WORKSPACE}/pdf.xml
+          project: pdf.xml
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
