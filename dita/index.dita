@@ -35,7 +35,8 @@
          href="https://www.dita-ot.org/3.6/topics/installing-client.html" format="html"
          scope="external">here</xref>.
       </p>
-      <p deliveryTarget="html"></p>
+      <p deliveryTarget="html">
+      </p>
       <ol>
         <li>
            Download the <codeph>dita-ot-3.6.1.zip</codeph> package from the project website
