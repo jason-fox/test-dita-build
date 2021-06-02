@@ -8,7 +8,7 @@
 <topic id="index">
   <title>DITA-OT Plugins</title>
   <abstract>
-     A series of plug-in for <xref format="html" scope="external"
+     Documentation for a series of plug-in for <xref format="html" scope="external"
      href="http://www.dita-ot.org">DITA Open Toolkit</xref> that extends the default
      processing with additional functionality
   </abstract>
@@ -35,6 +35,7 @@
          href="https://www.dita-ot.org/3.6/topics/installing-client.html" format="html"
          scope="external">here</xref>.
       </p>
+      <p deliveryTarget="html"></p>
       <ol>
         <li>
            Download the <codeph>dita-ot-3.6.1.zip</codeph> package from the project website

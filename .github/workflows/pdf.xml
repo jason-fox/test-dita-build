@@ -3,12 +3,12 @@
 <project xmlns="https://www.dita-ot.org/project">
   <deliverable id="pdf">
     <context name="User Guide">
-      <input href="./document.ditamap"/>
+      <input href="../../dita/document.ditamap"/>
       <profile>
-        <ditaval href="./pdf.ditaval"/>
+        <ditaval href="pdf.ditaval"/>
       </profile>
     </context>
-    <output href="./pdf"/>
+    <output href="pdf"/>
     <publication transtype="pdf2">
       <param name="args.chapter.layout" value="BASIC"/>
       <param name="args.gen.task.lbl" value="YES"/>

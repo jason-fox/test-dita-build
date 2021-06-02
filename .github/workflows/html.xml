@@ -2,21 +2,20 @@
 <?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?>
 <project xmlns="https://www.dita-ot.org/project">
   <context id="html" name="HTML">
-    <input href="./document.ditamap"/>
+    <input href="../../dita/document.ditamap"/>
     <profile>
-      <ditaval href="./html.ditaval"/>
+      <ditaval href="html.ditaval"/>
     </profile>
   </context>
   <deliverable name="HTML5" id="html">
     <context idref="html"/>
-    <output href="./html"/>
+    <output href="html"/>
     <publication transtype="html5-bootstrap">
-      <!--param name="args.copycss" value="yes"/>
-      <param name="args.css" value="dita-ot-doc.css"/>
+      <param name="args.copycss" value="yes"/>
+      <param name="args.css" value="dita.css"/>
       <param name="args.csspath" value="css"/>
-      <param name="args.cssroot" path="../../resources"/>
-      <param name="args.gen.task.lbl" value="YES"/>
-      <param name="args.hdr" href="../../resources/header.xml"/-->
+      <param name="args.cssroot" path="."/>
+      <param name="args.hdr" href="header.xml"/>
       <param name="html5.toc.generate" value="no"/>
       <param name="args.rellinks" value="none"/>
       <param name="nav-toc" value="partial"/>

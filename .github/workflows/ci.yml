@@ -23,8 +23,7 @@ jobs:
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             https://github.com/jason-fox/dita-bootstrap/archive/feature/bootstrap-5.0.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-          build: |
-            dita --project=${GITHUB_WORKSPACE}/html.xml
+          project: ${GITHUB_ACTION_PATH}/html.xml
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
@@ -42,7 +41,7 @@ jobs:
           plugins: |
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-          project: pdf.xml
+          project: ${GITHUB_ACTION_PATH}/pdf.xml
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
