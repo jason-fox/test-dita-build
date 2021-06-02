@@ -21,7 +21,7 @@ jobs:
             nodejs -v
           plugins: |
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-            https://github.com/jason-fox/dita-bootstrap/archive/feature/bootstrap-5.0.zip
+            https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           project: ${GITHUB_ACTION_PATH}/html.xml
       - name: Deploy HTML 🚀
