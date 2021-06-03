@@ -34,7 +34,7 @@
       </p>
       <p>
          Additional languages can be added by creating a new language folder and files
-         under <filepath>cfg/dictionary</filepath>
+         under <filepath>cfg/dictionary</filepath>.
       </p>
     </section>
     <section id="adding-new-mis-spellings-to-the-plug-in">
@@ -46,21 +46,21 @@
       </p>
       <ul>
         <li>
-           <b>duplicates.xml</b> - Duplicated words.
+           <codeph>duplicates.xml</codeph> - Duplicated words.
         </li>
         <li>
-           <b>grammar.xml</b> - Grammar errors (includes a ban on the use of contractions
+           <codeph>grammar.xml</codeph> - Grammar errors (includes a ban on the use of contractions
            in formal text )
         </li>
         <li>
-           <b>punctuation.xml</b> - Punctuation marks (includes a ban on smart quotes).
+           <codeph>punctuation.xml</codeph> - Punctuation marks (includes a ban on smart quotes).
         </li>
         <li>
-           <b>spelling.xml</b> - Spelling mistakes
+           <codeph>spelling.xml</codeph> - Spelling mistakes
         </li>
       </ul>
       <p>
-         Each entry takes the form of a pair
+         Each entry takes the form of a pair:
       </p>
       <codeblock scale="80" outputclass="language-xml"><coderef href="./src/entry.xml"/></codeblock>
     </section>
@@ -89,7 +89,7 @@
       </ul>
       <p>
          A custom ruleset file can be passed into the plug-in using the
-         <codeph>text-rules.ruleset.file</codeph> parameter
+         <codeph>text-rules.ruleset.file</codeph> parameter.
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> text-rules-echo <parmname>--input</parmname> document.ditamap --text-rules.ruleset.file=PATH_TO_CUSTOM/ruleset.xml</codeblock>
     </section>

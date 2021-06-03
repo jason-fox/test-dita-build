@@ -26,7 +26,7 @@
     <body>
       <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.pandoc/pandoc-300x194.png" outputclass="float-start me-3" height="55"/>
       <p>
-         <b>Pandoc</b> is a Haskell library for converting from one markup format to
+         <term>Pandoc</term> is a Haskell library for converting from one markup format to
          another, and a command-line tool that uses this library. It can convert from
          the following formats:
       </p>
@@ -92,9 +92,13 @@
         </li>
       </ul>
       <p>
-         This plug-in contains a Lua template which extends the output formats supported by <b>Pandoc</b>
-         to include DITA. The output consists of a single DITA topic for each input file
-         added to the ditamap.
+       More information about <term>Pandoc</term> can be found at 
+       <xref href="https://pandoc.org/" format="html" scope="external">pandoc.org</xref>.
+      </p>
+      <p>
+         This plug-in contains a Lua template which extends the output formats supported by 
+         <term>Pandoc</term> to include DITA. The output consists of a single DITA topic for 
+         each input file added to the ditamap.
       </p>
       <p>
          Unlike the standard <xref href="https://github.com/jelovirt/org.lwdita"

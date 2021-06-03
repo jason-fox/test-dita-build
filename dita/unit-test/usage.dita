@@ -6,7 +6,7 @@
     <note type="tip">
       <p>
          A series of test suites can be found within the plug-in at
-         <codeph>PATH_TO_DITA_OT/plugins/fox.jason.unit-test/sample</codeph>
+         <codeph>PATH_TO_DITA_OT/plugins/fox.jason.unit-test/sample</codeph>.
       </p>
     </note>
     <section id="obtaining-a-unit-test-report">
@@ -80,7 +80,7 @@
       <p>
          It is also possible to run XSL coverage over a single test. An individual test
          can be run directly from the command line by running the default target within
-         that test. This can be followed by direct invocation of the coverage report
+         that test. This can be followed by direct invocation of the coverage report.
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>ant</cmdname> <parmname>-f</parmname> PATH_TO_PLUGIN/test/TEST_NAME/build.xml
 <cmdname>dita</cmdname> <parmname>--format</parmname> <option>xsl-report</option> \
@@ -111,7 +111,7 @@
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>token-report</option> \
      <parmname>--input</parmname> PATH_TO_UNIT_TESTS</codeblock>
       <p>
-         Once the command has run, a coverage report is created
+         Once the command has run, a coverage report is created.
       </p>
     </section>
     <section id="sample-token-report">
@@ -156,7 +156,7 @@
       </p>
       <p>
          To obtain profile information, use the <option>antro</option> transform and
-         supply an additional test transtype
+         supply an additional test transtype.
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>antro</option> <parmname>--test.transform</parmname>=TRANSFORM_TO_PROFILE \
      <parmname>--input</parmname> document.ditamap</codeblock>
@@ -234,10 +234,10 @@
     <body>
       <image deliveryTarget="html" scope="external" href="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         <b>GitHub Actions</b> are a CI/CD environment integrated directly with GitHub.
+         <term>GitHub Actions</term> are a CI/CD environment integrated directly with GitHub.
          More information about how to set up GitHub Actions can be found on the <xref
          href="https://docs.github.com/en/free-pro-team@latest/actions" format="html"
-         scope="external">GitHub website</xref>
+         scope="external">GitHub website</xref>.
       </p>
       <fig>
         <title>GitHub Actions</title>
@@ -304,7 +304,7 @@ jobs:
     <body>
       <image deliveryTarget="html" scope="external" href="https://www.libtom.net/images/TravisCI-Full-Color-45e242791b7752b745a7ae53f265acd4.png" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         <b>Travis CI</b> is a hosted, distributed continuous integration service used to
+         <term>Travis CI</term> is a hosted, distributed continuous integration service used to
          build and test software projects hosted at GitHub. More information about how
          to set up travis integration can be found on the <xref
          href="https://docs.travis-ci.com/" format="html" scope="external">travis website</xref>.
@@ -393,7 +393,7 @@ The command "dita-ot/bin/dita --input dita-ot/plugins/PLUGIN-NAME -f unit-test -
     <body>
       <image deliveryTarget="html" scope="external" href="https://www.libtom.net/images/coveralls-bd6b762f7cf724a89de199133db5868f.png" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         <b>Coveralls</b> is a web service to help you track your code coverage over
+         <term>Coveralls</term> is a web service to help you track your code coverage over
          time, and ensure that all your new code is fully covered. More information
          about how to set up coveralls-travis integration can be found on the <xref
          href="https://docs.coveralls.io/" format="html" scope="external">travis website</xref>.

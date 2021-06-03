@@ -6,7 +6,7 @@
     <section id="xliff-1.2-invocation-from-the-command-line">
       <title outputclass="h3 mt-3">XLIFF 1.2 Invocation from the command line</title>
       <p>
-          1. to create an XLIFF 1.2 File and associated skeletons with run:
+         1. to create an XLIFF 1.2 File and associated skeletons with run:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-create</option> \
      <parmname>--input</parmname> document.ditamap \
@@ -26,7 +26,7 @@
          <xmlelement>target</xmlelement> elements.
       </note>
       <p>
-          2. to populate an exisiting XLIFF 1.2 File with auto-translated text
+         2. to populate an exisiting XLIFF 1.2 File with auto-translated text:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
      <parmname>--input</parmname> translate.xlf \
@@ -48,7 +48,7 @@
     <section id="xliff-2.1-invocation-from-the-command-line">
       <title outputclass="h3 mt-3">XLIFF 2.1 Invocation from the command line</title>
       <p>
-          3. to create an XLIFF 2.1 File and associated skeletons with run:
+         3. to create an XLIFF 2.1 File and associated skeletons with run:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-create</option> \
      <parmname>--input</parmname> document.ditamap  \
@@ -63,7 +63,7 @@
         <codeblock scale="80" outputclass="language-xml"><coderef href="./src/output-2.1.xliff"/></codeblock>
       </fig>
       <p>
-          4. to populate an exisiting XLIFF 2.1 File with auto-translated text
+         4. to populate an exisiting XLIFF 2.1 File with auto-translated text:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
      <parmname>--input</parmname> translate.xlf --translate.service=[bing|deepl|watson|yandex] \
@@ -84,7 +84,7 @@
     <section id="populating-skeletons-from-the-command-line">
       <title outputclass="h3 mt-3">Populating Skeletons from the command line</title>
       <p>
-          5. recreate <codeph>*.dita</codeph> files using an XLIFF File and its
+         5. recreate <codeph>*.dita</codeph> files using an XLIFF File and its
          associated skeletons with run:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-dita</option> \

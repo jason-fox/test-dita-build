@@ -5,10 +5,9 @@
   <abstract>
     <shortdesc>
        The Spelling and Grammar Checker plug-in for DITA OT is an <b>extension</b> of
-       the base <xref href="https://jason-fox.github.io/com.here.validate.svrl"
-       format="html" scope="external">DITA Validator</xref> which adds simple
-       rule-based <b>spelling and grammar</b> validation for the text elements within
-       DITA documents.
+       the base <xref href="../validate.svrl/index.dita" format="dita" >DITA Validator</xref> 
+       which adds simple rule-based <b>spelling and grammar</b> validation for the text
+       elements within DITA documents.
     </shortdesc>
   </abstract>
   <prolog>
@@ -30,7 +29,7 @@
          a DITA document
       </li>
       <li>
-         <option>text-rules</option> - create an error report in <b>Schematron Validation Report Language</b>
+         <option>text-rules</option> - create an error report in <term>Schematron Validation Report Language</term>
          (<codeph>SVRL</codeph>) format
       </li>
       <li>
@@ -40,7 +39,7 @@
     </ul>
     <p>
        More information about <codeph>SVRL</codeph> can be found at <xref
-       href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>
+       href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>.
     </p>
     <p>
        Most of the spell-checking rules are based on a list of <xref

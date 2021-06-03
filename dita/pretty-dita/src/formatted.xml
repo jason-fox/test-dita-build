@@ -66,7 +66,7 @@
             </p>
             <codeblock>$ npm install prismjs</codeblock>
             <p>
-              You can then <codeph outputclass="language-js">import</codeph> into your bundle
+              You can then <codeph outputclass="language-js">import</codeph> into your bundle.
             </p>
             <codeblock outputclass="language-js">import Prism from 'prismjs';</codeblock>
             <p>
@@ -74,7 +74,7 @@
               plugins you need, use the babel plugin, <xref format="html" scope="external"
               href="https://github.com/mAAdhaTTah/babel-plugin-prismjs">babel-plugin-prismjs</xref>.
               This will allow you to load the minimum number of languages and plugins to
-              satisfy your needs. See that plugin's documentation for configuration details
+              satisfy your needs. See that plugin's documentation for configuration details.
             </p>
         </section>
     </body>

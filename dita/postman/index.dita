@@ -24,16 +24,13 @@
     <body>
       <image deliveryTarget="html" scope="external" href="https://assets.getpostman.com/common-share/postman-logo-horizontal-orange.svg" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-        <xref href="https://www.getpostman.com/" format="html" scope="external">Postman</xref>
-        is a software development tool which a developer can use to build, publish,
-        document, design, monitor, test and debug their REST APIs.
+        <term>Postman</term> is a software development tool which a developer can use to 
+        build, publish, document, design, monitor, test and debug their REST APIs. More information 
+        about <term>Postman</term> can be found at <xref href="https://www.postman.com/" format="html" scope="external">postman.com</xref>.
       </p>
       <p>
          This plugin processes a Postman collection to Pandoc markdown, and the converts
-         the markdown to DITA using the <xref
-         href="https://github.com/jason-fox/fox.jason.passthrough.pandoc" format="html"
-         scope="external">Pandoc DITA-OT Plugin</xref> allowing the generation of PDF
-         API documentation.
+         the markdown to DITA using the <xref href="../pandoc/index.dita" format="dita">Pandoc DITA-OT Plugin</xref> allowing the generation of PDF API documentation.
       </p>
       <fig id="sample-postman">
         <title>Sample Postman</title>

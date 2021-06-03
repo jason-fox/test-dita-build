@@ -417,7 +417,7 @@
       <codeblock scale="80" outputclass="language-xml">That is a &lt;ph props="emphasis"&gt; big &lt;/ph&gt; car!
 That is a &lt;ph props="emphasis level(strong)"&gt; huge &lt;/ph&gt;bank account!</codeblock>
       <p>
-         Emphasis can also be achieved using the <xmlelement>b</xmlelement> tag
+         Emphasis can also be achieved using the <xmlelement>b</xmlelement> tag.
       </p>
       <codeblock scale="80" outputclass="language-xml">That is a &lt;b&gt; big &lt;/b&gt; car!
 That is a &lt;b props="level(strong)"&gt; huge &lt;/b&gt;bank account!</codeblock>

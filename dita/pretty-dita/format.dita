@@ -13,7 +13,7 @@
       <title outputclass="h3 mt-3">Basic Block Elements</title>
       <p>
          By default all DITA elements (not listed in the categories below) are indented
-         one level further than the containing DITA element
+         one level further than the containing DITA element.
       </p>
       <codeblock scale="80" outputclass="language-xml">&lt;topic id="basic-usage"&gt;
     &lt;title&gt;Basic usage&lt;/title&gt;
@@ -67,7 +67,7 @@
       <title outputclass="h3 mt-3">Inline Elements</title>
       <p>
          The following elements are treated as inline elements, they do not warrant an
-         additional line and are kept within the surrounding text
+         additional line and are kept within the surrounding text.
       </p>
       <ul>
         <li>

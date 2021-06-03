@@ -48,7 +48,7 @@
         <image deliveryTarget="html" scope="external" href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png" outputclass="float-start mt-1 me-3" height="55"/>
         <p>
            The IBM Language Translator allows you to translate text programmatically from
-           one language into another language
+           one language into another language.
         </p>
         <p>
            Introduction: <xref
@@ -194,7 +194,7 @@
         <p>
            After you sign in to your account select API Keys and create a new key as
            necessary. The latest endpoint can be found in the <xref
-           href="https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/#xml" format="html" scope="external">documentation</xref>
+           href="https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/#xml" format="html" scope="external">documentation</xref>.
         </p>
         <codeblock outputclass="language-none">https://translate.yandex.net/api/v1.5/tr/translate</codeblock>
         <p>

@@ -5,7 +5,7 @@
   <abstract>
     <shortdesc>
        This is a syntax highlighting DITA-OT Plug-in which integrates the flexible
-       <xref href="https://github.com/prismjs/prism" format="html" scope="external">PrismJS</xref>
+       <xref href="https://github.com/prismjs/prism" format="html" scope="external"><term>PrismJS</term></xref>
        highlighting library into the DITA Open Toolkit engine. This enables the
        generation of documents including code snippets which are automatically
        colorized according to language syntax. The plug-in extends both static HTML
@@ -30,7 +30,7 @@
       <div>
         <image deliveryTarget="html" scope="external" href="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" outputclass="float-start mt-1 me-3" height="55"/>
         <p>
-           Prism is a lightweight, extensible syntax highlighter, built with modern web standards
+           <term>Prism</term> is a lightweight, extensible syntax highlighter, built with modern web standards
            in mind. It’s a spin-off project from <xref href="http://dabblet.com/" format="html" scope="external">
            Dabblet</xref>.
         </p>
@@ -57,7 +57,7 @@
          scope="external">http://prismjs.com/</xref>.
       </p>
       <p>
-<xref href="http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841" format="html" scope="external">Why another syntax highlighter?</xref>
+<xref href="http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841" format="html" scope="external">Why another syntax highlighter?</xref>.
       </p>
     </body>
   </topic>

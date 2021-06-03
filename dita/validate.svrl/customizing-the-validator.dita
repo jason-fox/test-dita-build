@@ -44,7 +44,7 @@
       </ul>
       <p>
          A custom ruleset file can be passed into the plug-in using the
-         <parmname>svrl.ruleset.file</parmname> parameter
+         <parmname>svrl.ruleset.file</parmname> parameter:
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl-echo</option> <parmname>--input</parmname> document.ditamap -D<parmname>svrl.ruleset.file</parmname>=PATH_TO_CUSTOM/ruleset.xml</codeblock>
     </body>

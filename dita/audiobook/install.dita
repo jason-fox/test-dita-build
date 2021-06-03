@@ -32,14 +32,14 @@
     <body>
       <image deliveryTarget="html" scope="external" href="https://tecadmin.net/wp-content/uploads/2013/11/ffmpeg-logo-370x250.png" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         FFmpeg is a free software project consisting of a software suite of libraries
+         <term>FFmpeg</term> is a free software project consisting of a software suite of libraries
          and programs for handling video, audio, and other multimedia files and streams.
          FFmpeg is published under the GNU Lesser General Public License 2.1+ or GNU
          General Public License 2+ (depending on which options are enabled).
       </p>
       <p>
          To download a copy follow the instructions on the <xref
-         href="https://ffmpeg.org/download.html" format="html" scope="external">Download page</xref>
+         href="https://ffmpeg.org/download.html" format="html" scope="external">Download page</xref>.
       </p>
     </body>
   </topic>
@@ -62,7 +62,7 @@
         </p>
         <p>
            Introduction: <xref
-           href="https://cloud.ibm.com/docs/services/text-to-speech?topic=text-to-speech-gettingstarted" format="html" scope="external">Getting Started</xref>
+           href="https://cloud.ibm.com/docs/services/text-to-speech?topic=text-to-speech-gettingstarted" format="html" scope="external">Getting Started</xref>.
         </p>
         <p>
            Create an instance of the service:
@@ -112,7 +112,7 @@
         </p>
         <p>
            Introduction: <xref
-           href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started" format="html" scope="external">Getting Started</xref>
+           href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started" format="html" scope="external">Getting Started</xref>.
         </p>
         <p>
            Create an instance of the service:

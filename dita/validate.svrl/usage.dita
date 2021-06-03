@@ -18,15 +18,11 @@
         </p>
         <ul>
           <li>
-            <p>
-               From a terminal prompt move to the directory holding the document to validate
-            </p>
+            From a terminal prompt move to the directory holding the document to validate.
           </li>
           <li>
-            <p>
-               SVRL file creation (<option>svrl</option>) can be run like any other DITA-OT
-               transform:
-            </p>
+            SVRL file creation (<option>svrl</option>) can be run like any other DITA-OT
+            transform:
           </li>
         </ul>
         <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl</option> \
@@ -34,7 +30,7 @@
      <parmname>--output</parmname> out \
      <parmname>--input</parmname> document.ditamap</codeblock>
         <p>
-           Once the command has run, an SVRL file is created
+           Once the command has run, an SVRL file is created.
         </p>
         <fig>
           <title>SVRL Output</title>
@@ -56,14 +52,14 @@
         <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl</option> \
     <parmname>--input</parmname> document.ditamap</codeblock>
         <p>
-           Once the command has run, all errors and warnings are echoed to the command line
+           Once the command has run, all errors and warnings are echoed to the command line.
         </p>
         <fig>
           <title>Command Line Output</title>
           <codeblock scale="80" outputclass="language-none"><coderef href="./src/warning.txt"/></codeblock>
         </fig>
         <p>
-           Additionally, if an error occurs, the command will fail
+           Additionally, if an error occurs, the command will fail.
         </p>
         <fig>
           <title>Command Line Output with Failure</title>
@@ -71,7 +67,7 @@
         </fig>
         <p>
            Optionally, the output can be highlighed using ANSI color codes by adding the
-           <parmname>args.validate.color</parmname> parameter
+           <parmname>args.validate.color</parmname> parameter.
         </p>
         <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl-echo</option> \
     <parmname>--input</parmname> document.ditamap \

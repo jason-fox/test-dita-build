@@ -13,7 +13,7 @@
   </prolog>
   <body>
     <p>
-       To mark a file to be passed through for <b>Swagger</b> processing, label  the <xmlelement>topicref</xmlelement>
+       To mark a file to be passed through for <term>Swagger</term> processing, label  the <xmlelement>topicref</xmlelement>
        with <xmlatt>format="swagger"</xmlatt> within the <xmlelement>map</xmlelement>
        as shown:
     </p>

@@ -59,7 +59,7 @@
           <p>
              <parmname>args.require-pragma</parmname> - Restrict the plug-in to only format
              files that contain a special comment, called a pragma, at the top of the file
-             (default <option>false</option>)
+             (default <option>false</option>).
           </p>
           <p>
              This is very useful when gradually transitioning large, unformatted codebases

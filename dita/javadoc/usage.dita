@@ -23,7 +23,7 @@
    [Javadoc- and XmlDoclet-Options]</codeblock>
     <p>
        Once the source XML has been created, add it to the <xmlelement>map</xmlelement>
-       and mark it for <b>Javadoc</b> processing, by labelling  the <xmlelement>topicref</xmlelement>
+       and mark it for <term>Javadoc</term> processing, by labelling  the <xmlelement>topicref</xmlelement>
        with <xmlatt>format="javadoc"</xmlatt> within the <xmlelement>map</xmlelement>
        as shown:
     </p>

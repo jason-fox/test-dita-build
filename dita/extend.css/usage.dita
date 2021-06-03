@@ -8,7 +8,7 @@
     </p>
     <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname>--input</parmname> document.ditamap</codeblock>
     <p>
-       Each HTML output file will include an additional line in the <xmlelement>head</xmlelement>
+       Each HTML output file will include an additional line in the <xmlelement>head</xmlelement>.
     </p>
     <fig>
       <title>Output</title>

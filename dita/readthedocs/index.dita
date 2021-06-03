@@ -28,7 +28,7 @@
         <codeblock scale="80" outputclass="yaml"><coderef href="./src/mkdocs.yml"/></codeblock>
         <p>
            Additionally it is possible to use the plug-in to create a DITA <xmlelement>bookmap</xmlelement>
-           file from an existing <codeph>mkdocs.yaml</codeph> file
+           file from an existing <codeph>mkdocs.yaml</codeph> file.
         </p>
       </section>
       <section id="sample-ditamap">

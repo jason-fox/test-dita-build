@@ -31,11 +31,11 @@
       <title outputclass="h3 mt-3">Installing DITA-OT</title>
       <image deliveryTarget="html" scope="external" href="https://www.dita-ot.org/images/dita-ot-logo.svg" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         Full installation instructions for downloading DITA-OT can be found <xref
-         href="https://www.dita-ot.org/3.6/topics/installing-client.html" format="html"
+         <term>DITA Open Toolkit</term>, or <term>DITA-OT</term> for short, is a set of Java-based,
+          open-source tools that provide processing for content authored in the <term>Darwin Information 
+          Typing Architecture</term>.Full installation instructions for downloading DITA-OT can be
+          found <xref href="https://www.dita-ot.org/3.6/topics/installing-client.html" format="html"
          scope="external">here</xref>.
-      </p>
-      <p deliveryTarget="html">
       </p>
       <ol>
         <li>

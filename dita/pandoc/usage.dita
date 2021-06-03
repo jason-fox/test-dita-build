@@ -13,7 +13,7 @@
   </prolog>
   <body>
     <p>
-       To mark a file to be passed through for <b>Pandoc</b> processing, label the <xmlelement>topicref</xmlelement>
+       To mark a file to be passed through for <term>Pandoc</term> processing, label the <xmlelement>topicref</xmlelement>
        with <xmlatt>format="pandoc"</xmlatt> within the <xmlelement>map</xmlelement>
        as shown:
     </p>
@@ -58,7 +58,7 @@ Body of topic 2 goes here.
 ...etc</codeblock>
       </fig>
       <p>
-         Ideally input files should only contain a single <codeph>#</codeph> header
+         Ideally input files should only contain a single <codeph>#</codeph> header.
       </p>
       <p>
          Pandoc <xref href="http://pandoc.org/manual.html#extension-header-attributes"

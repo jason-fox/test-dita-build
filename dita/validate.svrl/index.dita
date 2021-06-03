@@ -32,12 +32,12 @@
          Automatically fix common validation errors within the document.
       </li>
       <li>
-         Return a report in <i>Schematron Validation Report Language</i> (<codeph>SVRL</codeph>) format.
+         Return a report in <term>Schematron Validation Report Language</term> (<codeph>SVRL</codeph>) format.
       </li>
     </ul>
     <p>
        More information about SVRL can be found at <xref
-       href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>
+       href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>.
     </p>
   </body>
   <topic id="validator-compliant-dita">

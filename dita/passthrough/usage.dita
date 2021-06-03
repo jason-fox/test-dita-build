@@ -57,7 +57,7 @@
       <body>
         <p>
            The following <codeph>plugin.xml</codeph> will enable the post-processing of
-           all files marked as <codeph>format=NEW_FORMAT</codeph>
+           all files marked as <codeph>format=NEW_FORMAT</codeph>.
         </p>
         <fig id="plugin.xml-configuration">
          <title><codeph>plugin.xml</codeph> Configuration

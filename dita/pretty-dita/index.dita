@@ -33,7 +33,7 @@
       <p>
          After running the <option>pretty-dita</option> transform, the same file will
          have all its elements aligned, each block element on a new line and text should
-         not overrun the side of a typical view screen (approx 120 characters)
+         not overrun the side of a typical view screen (approx 120 characters).
       </p>
       <fig id="formatted-dita">
         <title outputclass="h4">Formatted DITA</title>

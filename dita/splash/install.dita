@@ -33,7 +33,7 @@
        To switch to displaying XKCD images, amend the <codeph>pom.xml</codeph> within
        the plug-in directly and  replace the line <xmlelement>feature
        extension="depend.preprocess.pre" value="cats.splash"/</xmlelement> with
-       <xmlelement>feature extension="depend.preprocess.pre" value="xkcd.splash"/</xmlelement>
+       <xmlelement>feature extension="depend.preprocess.pre" value="xkcd.splash"/</xmlelement>.
     </p>
   </body>
 </topic>

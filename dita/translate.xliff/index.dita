@@ -24,7 +24,7 @@
     <title outputclass="h3 mt-3">Example</title>
     <body>
       <p>
-         This plug-in consists of three DITA-OT transforms
+         This plug-in consists of three DITA-OT transforms:
       </p>
       <ul>
         <li>

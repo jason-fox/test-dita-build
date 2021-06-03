@@ -18,14 +18,10 @@
         </p>
         <ul>
           <li>
-            <p>
-               From a terminal prompt move to the directory holding the document to validate
-            </p>
+            From a terminal prompt move to the directory holding the document to validate
           </li>
           <li>
-            <p>
-               SVRL file creation can be run like any other DITA-OT transform:
-            </p>
+            SVRL file creation can be run like any other DITA-OT transform:
           </li>
         </ul>
         <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>text-rules</option> \
@@ -44,7 +40,7 @@
         <title outputclass="h4 mt-3">Echoing results to the command line</title>
         <p>
            To echo results to the command line with the spell-checker plug-in use the
-           <option>text-rules</option> transform without specifying a <option>report</option>
+           <option>text-rules</option> transform without specifying a <option>report</option>.
         </p>
         <ul>
           <li>
@@ -62,7 +58,7 @@
           <codeblock scale="80" outputclass="language-bash"><coderef href="./src/error1.txt"/></codeblock>
         </fig>
         <p>
-           Additionally, if an error occurs, the command will fail
+           Additionally, if an error occurs, the command will fail:
         </p>
         <fig>
           <title>Command Line Output with Failure</title>

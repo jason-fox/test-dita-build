@@ -11,12 +11,12 @@
   </prolog>
   <body>
     <p>
-       The following ANT tasks are available from the DITA-OT Unit Test Framework
+       The following ANT tasks are available from the DITA-OT Unit Test Framework:
     </p>
     <section id="compare-output">
       <title outputclass="h4 mt-3">Compare-Output</title>
       <p>
-         Fail the test if the test output file does not match the expectation file
+         Fail the test if the test output file does not match the expectation file.
       </p>
       <table>
         <tgroup cols="3">
@@ -80,7 +80,7 @@
     <section id="contains-text">
       <title outputclass="h4 mt-3">Contains-Text</title>
       <p>
-         Fail the test if the log from the test does not contain the given string
+         Fail the test if the log from the test does not contain the given string.
       </p>
       <table>
         <tgroup cols="3">
@@ -116,12 +116,12 @@
       </table>
       <codeblock scale="80" outputclass="language-xml">&lt;contains-text expected="Lorem Ipsum"/&gt;</codeblock>
       <p>
-         compares the output of DITA-OT and fails if the text "Lorem Ipsum" cannot be found
+         compares the output of DITA-OT and fails if the text "Lorem Ipsum" cannot be found.
       </p>
       <codeblock scale="80" outputclass="language-xml">&lt;contains-text expected="This is running on Windows" os="windows"/&gt;</codeblock>
       <p>
          if running on a Windows system, compares the output of DITA-OT and fails if the
-         text "This is running on Windows" cannot be found
+         text "This is running on Windows" cannot be found.
       </p>
       <p>
          if running on a UNIX system, no comparison is made.
@@ -131,7 +131,7 @@
       <title outputclass="h4 mt-3">Exec-HTML5</title>
       <p>
          Execute the HTML5 DITA-OT transform in verbose mode The test will fail if the
-         result was not as expected or took too long
+         result was not as expected or took too long.
       </p>
       <table>
         <tgroup cols="3">
@@ -184,13 +184,13 @@
       <codeblock scale="80" outputclass="language-xml">&lt;exec-html5 transtype="custom-html"/&gt;</codeblock>
       <p>
          runs DITA-OT using the <codeph>custom-html</codeph> HTML transtype. the output
-         will be placed in the <codeph>/out/html</codeph> directory
+         will be placed in the <codeph>/out/html</codeph> directory.
       </p>
     </section>
     <section id="exec-pdf">
       <title outputclass="h4 mt-3">Exec-PDF</title>
       <p>
-         Execute the PDF DITA-OT transform in verbose mode
+         Execute the PDF DITA-OT transform in verbose mode.
       </p>
       <table>
         <tgroup cols="3">
@@ -244,7 +244,7 @@
       <p>
          runs DITA-OT using the <codeph>custom-pdf</codeph> PDF transtype. <codeph>topic.fo</codeph>
          and <codeph>document.pdf</codeph> will be placed in the <codeph>/out</codeph>
-         directory
+         directory.
       </p>
     </section>
     <section id="exec-svrl">
@@ -303,7 +303,7 @@
       </table>
       <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="text-rules"/&gt;</codeblock>
       <p>
-         runs DITA-OT using the <codeph>text-rules</codeph> SVRL transtype
+         runs DITA-OT using the <codeph>text-rules</codeph> SVRL transtype.
       </p>
       <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="svrl-echo" expectedresult="1"/&gt;</codeblock>
       <p>
@@ -367,7 +367,7 @@
       </table>
       <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="custom"/&gt;</codeblock>
       <p>
-         runs DITA-OT using the <codeph>custom</codeph> transtype
+         runs DITA-OT using the <codeph>custom</codeph> transtype.
       </p>
       <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="custom" expectedresult="1"/&gt;</codeblock>
       <p>
@@ -425,7 +425,7 @@
       <p>
          Loads a given <codeph>topic.fo</codeph> file and extracts the last <codeph>fo.flow</codeph>
          element (which corresponds to a DITA topic) for further examination. Also
-         remove colors, fonts and excess attributes
+         remove colors, fonts and excess attributes.
       </p>
       <table>
         <tgroup cols="3">

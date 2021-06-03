@@ -12,7 +12,7 @@
      <parmname>--pdf.watermark</parmname>=<option>draft|review|final</option>
     </codeblock>
     <p>
-       By default the output PDF will be watermarked as a <b>DRAFT</b>
+       By default the output PDF will be watermarked as a <b>DRAFT</b>.
     </p>
   </body>
   <topic id="parameter-reference">
@@ -86,7 +86,7 @@
         <p>
            A working example can be found in the <xref
            href="https://github.com/jason-fox/fox.jason.watermark.auth" format="html"
-           scope="external">Authorized Watermark DITA-OT plug-in</xref>
+           scope="external">Authorized Watermark DITA-OT plug-in</xref>.
         </p>
       </body>
     </topic>

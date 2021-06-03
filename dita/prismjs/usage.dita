@@ -47,12 +47,12 @@
     </fig>
     <p>
        A test document including HTML, CSS and JavaScript code snippets can be found
-       within the plug-in at: <codeph>PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample</codeph>
+       within the plug-in at: <codeph>PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample</codeph>.
     </p>
     <section id="invocation-from-the-command-line">
       <title outputclass="h3 mt-3">Invocation from the command line</title>
       <p>
-         The Plug-in extends the existing PDF and HTML transforms
+         The Plug-in extends the existing PDF and HTML transforms.
       </p>
       <ul>
         <li>
@@ -89,12 +89,12 @@
          expressions. Additional languages are loaded dynamically during processing. A
          large number of additional languages are supported - just look at the list on
          <xref href="https://github.com/prismjs/prism/tree/master/components"
-         format="html" scope="external">https://github.com/PrismJS/prism/tree/master/components</xref>
+         format="html" scope="external">https://github.com/PrismJS/prism/tree/master/components</xref>.
       </p>
       <p>
          Extend with an additional plug-in which overrides the default <parmname>prismjs.css.file</parmname>
          property and amend a copy of the <codeph>resource/style.css</codeph> file to
-         alter the look-and-feel of the rendered HTML
+         alter the look-and-feel of the rendered HTML.
       </p>
       <fig>
         <title>Plugin.xml</title>
@@ -107,7 +107,7 @@
       <p>
          A working example can be found in the <xref
          href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
-         scope="external">Dark Theme CSS DITA-OT plug-in</xref>
+         scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
       </p>
       <p>
          The <codeph>cfg/fo/attrs/prismjs-attr.xsl</codeph> provides the colors for the
@@ -129,7 +129,7 @@
       <p>
          A working example can be found in the <xref
          href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
-         scope="external">Dark Theme CSS DITA-OT plug-in</xref>
+         scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
       </p>
     </section>
   </body>

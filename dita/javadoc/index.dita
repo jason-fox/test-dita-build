@@ -6,8 +6,10 @@
     <shortdesc>
        This is a <xref href="https://www.dita-ot.org/plugins" format="html"
        scope="external">DITA-OT Plug-in</xref> used to auto-create valid DITA-based
-       Javadoc documentation. The initial source of the documentation can be generated
-       directly using the <xref href="https://github.com/markusbernhardt/xml-doclet"
+       <xref href="https://docs.oracle.com/javase/1.5.0/docs/guide/javadoc/index.html"
+       format="html" scope="external">Javadoc</xref> documentation. The initial source 
+       of the documentation can be generated directly using the 
+       <xref href="https://github.com/markusbernhardt/xml-doclet"
        format="html" scope="external">JavaDoc XML Doclet</xref>. The XML file can be
        added to the source and processed as if it had been written in DITA.
     </shortdesc>
@@ -26,11 +28,9 @@
     <body>
       <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.javadoc/javalogo.png" outputclass="float-start mt-1 me-3" height="55"/>
       <p>
-         <xref href="https://docs.oracle.com/javase/1.5.0/docs/guide/javadoc/index.html"
-         format="html" scope="external">Javadoc</xref> is a tool that parses the
-         declarations and documentation comments in a set of source files and produces a
-         set of HTML pages describing the classes, interfaces, constructors, methods,
-         and fields.
+         <term>Javadoc</term> is a tool that parses the declarations and documentation 
+         comments in a set of source files and produces a set of HTML pages describing 
+         the classes, interfaces, constructors, methods, and fields.
       </p>
       <p>
          JavaDoc supports doclets used to customize Javadoc output. A doclet is a program
