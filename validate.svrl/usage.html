@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="keywords" content="ANT"><title>Usage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/dita.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="usage"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="usage"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
 
   <div class="container">
     <a class="navbar-brand" href="https://www.dita-ot.org/">Plugins for DITA Open Toolkit</a>
@@ -36,15 +36,11 @@
         </p>
         <ul class="ul">
           <li class="li">
-            <p class="p">
-               From a terminal prompt move to the directory holding the document to validate
-            </p>
+            From a terminal prompt move to the directory holding the document to validate.
           </li>
           <li class="li">
-            <p class="p">
-               SVRL file creation (<span class="keyword option">svrl</span>) can be run like any other DITA-OT
-               transform:
-            </p>
+            SVRL file creation (<span class="keyword option">svrl</span>) can be run like any other DITA-OT
+            transform:
           </li>
         </ul>
         <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">svrl</span> <span class="ph token punctuation">\</span>
@@ -52,7 +48,7 @@
      <span class="keyword parmname">--output</span> out <span class="ph token punctuation">\</span>
      <span class="keyword parmname">--input</span> document.ditamap</code></pre>
         <p class="p">
-           Once the command has run, an SVRL file is created
+           Once the command has run, an SVRL file is created.
         </p>
         <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>SVRL Output</figcaption>
           
@@ -94,7 +90,7 @@
         <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">svrl</span> <span class="ph token punctuation">\</span>
     <span class="keyword parmname">--input</span> document.ditamap</code></pre>
         <p class="p">
-           Once the command has run, all errors and warnings are echoed to the command line
+           Once the command has run, all errors and warnings are echoed to the command line.
         </p>
         <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>Command Line Output</figcaption>
           
@@ -106,7 +102,7 @@ FIXME This comment requires action
 Found 0 Errors 1 Warnings</code></pre>
         </figure>
         <p class="p">
-           Additionally, if an error occurs, the command will fail
+           Additionally, if an error occurs, the command will fail.
         </p>
         <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 3. </span>Command Line Output with Failure</figcaption>
           
@@ -119,7 +115,7 @@ Error: [SVRL001F][FATAL] Errors detected during validation</code></pre>
         </figure>
         <p class="p">
            Optionally, the output can be highlighed using ANSI color codes by adding the
-           <span class="keyword parmname">args.validate.color</span> parameter
+           <span class="keyword parmname">args.validate.color</span> parameter.
         </p>
         <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">svrl-echo</span> <span class="ph token punctuation">\</span>
     <span class="keyword parmname">--input</span> document.ditamap <span class="ph token punctuation">\</span>

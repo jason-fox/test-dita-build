@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="keywords" content="ANT"><title>Unit Testing ANT Tasks</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/dita.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="unit-testing-ant-tasks"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="unit-testing-ant-tasks"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
 
   <div class="container">
     <a class="navbar-brand" href="https://www.dita-ot.org/">Plugins for DITA Open Toolkit</a>
@@ -23,12 +23,12 @@
   
   <div class="body">
     <p class="p">
-       The following ANT tasks are available from the DITA-OT Unit Test Framework
+       The following ANT tasks are available from the DITA-OT Unit Test Framework:
     </p>
     <section class="section" id="unit-testing-ant-tasks__compare-output"><h2 class="title h4 mt-3">Compare-Output</h2>
       
       <p class="p">
-         Fail the test if the test output file does not match the expectation file
+         Fail the test if the test output file does not match the expectation file.
       </p>
       <table class="table"><caption></caption><colgroup><col style="width:9%"><col style="width:63%"><col style="width:27%"></colgroup><thead class="thead">
             <tr class="">
@@ -84,7 +84,7 @@
     <section class="section" id="unit-testing-ant-tasks__contains-text"><h2 class="title h4 mt-3">Contains-Text</h2>
       
       <p class="p">
-         Fail the test if the log from the test does not contain the given string
+         Fail the test if the log from the test does not contain the given string.
       </p>
       <table class="table"><caption></caption><colgroup><col style="width:7%"><col style="width:63%"><col style="width:29%"></colgroup><thead class="thead">
             <tr class="">
@@ -112,12 +112,12 @@
           </tbody></table>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>contains-text</span> <span class="ph token attr-name">expected</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Lorem Ipsum<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
-         compares the output of DITA-OT and fails if the text "Lorem Ipsum" cannot be found
+         compares the output of DITA-OT and fails if the text "Lorem Ipsum" cannot be found.
       </p>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>contains-text</span> <span class="ph token attr-name">expected</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>This is running on Windows<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">os</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>windows<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
          if running on a Windows system, compares the output of DITA-OT and fails if the
-         text "This is running on Windows" cannot be found
+         text "This is running on Windows" cannot be found.
       </p>
       <p class="p">
          if running on a UNIX system, no comparison is made.
@@ -127,7 +127,7 @@
       
       <p class="p">
          Execute the HTML5 DITA-OT transform in verbose mode The test will fail if the
-         result was not as expected or took too long
+         result was not as expected or took too long.
       </p>
       <table class="table"><caption></caption><colgroup><col style="width:7%"><col style="width:46%"><col style="width:47%"></colgroup><thead class="thead">
             <tr class="">
@@ -172,13 +172,13 @@
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-html5</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>custom-html<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
          runs DITA-OT using the <code class="ph codeph language-markup">custom-html</code> HTML transtype. the output
-         will be placed in the <code class="ph codeph language-markup">/out/html</code> directory
+         will be placed in the <code class="ph codeph language-markup">/out/html</code> directory.
       </p>
     </section>
     <section class="section" id="unit-testing-ant-tasks__exec-pdf"><h2 class="title h4 mt-3">Exec-PDF</h2>
       
       <p class="p">
-         Execute the PDF DITA-OT transform in verbose mode
+         Execute the PDF DITA-OT transform in verbose mode.
       </p>
       <table class="table"><caption></caption><colgroup><col style="width:7%"><col style="width:47%"><col style="width:45%"></colgroup><thead class="thead">
             <tr class="">
@@ -224,7 +224,7 @@
       <p class="p">
          runs DITA-OT using the <code class="ph codeph language-markup">custom-pdf</code> PDF transtype. <code class="ph codeph language-markup">topic.fo</code>
          and <code class="ph codeph language-markup">document.pdf</code> will be placed in the <code class="ph codeph language-markup">/out</code>
-         directory
+         directory.
       </p>
     </section>
     <section class="section" id="unit-testing-ant-tasks__exec-svrl"><h2 class="title h4 mt-3">Exec-SVRL</h2>
@@ -275,7 +275,7 @@
           </tbody></table>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-svrl</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>text-rules<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
-         runs DITA-OT using the <code class="ph codeph language-markup">text-rules</code> SVRL transtype
+         runs DITA-OT using the <code class="ph codeph language-markup">text-rules</code> SVRL transtype.
       </p>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-svrl</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>svrl-echo<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">expectedresult</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
@@ -331,7 +331,7 @@
           </tbody></table>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-svrl</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>custom<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
-         runs DITA-OT using the <code class="ph codeph language-markup">custom</code> transtype
+         runs DITA-OT using the <code class="ph codeph language-markup">custom</code> transtype.
       </p>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>exec-svrl</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>custom<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">expectedresult</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span></code></pre>
       <p class="p">
@@ -381,7 +381,7 @@
       <p class="p">
          Loads a given <code class="ph codeph language-markup">topic.fo</code> file and extracts the last <code class="ph codeph language-markup">fo.flow</code>
          element (which corresponds to a DITA topic) for further examination. Also
-         remove colors, fonts and excess attributes
+         remove colors, fonts and excess attributes.
       </p>
       <table class="table"><caption></caption><colgroup><col style="width:8%"><col style="width:60%"><col style="width:31%"></colgroup><thead class="thead">
             <tr class="">

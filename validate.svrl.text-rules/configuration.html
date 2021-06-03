@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><title>Configuration</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/dita.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="configuration"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="configuration"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
 
   <div class="container">
     <a class="navbar-brand" href="https://www.dita-ot.org/">Plugins for DITA Open Toolkit</a>
@@ -52,7 +52,7 @@
       </p>
       <p class="p">
          Additional languages can be added by creating a new language folder and files
-         under <span class="ph filepath">cfg/dictionary</span>
+         under <span class="ph filepath">cfg/dictionary</span>.
       </p>
     </section>
     <section class="section" id="configuration__adding-new-mis-spellings-to-the-plug-in"><h2 class="title h3 mt-3">Adding new mis-spellings to the plug-in</h2>
@@ -64,21 +64,21 @@
       </p>
       <ul class="ul">
         <li class="li">
-           <strong class="ph b">duplicates.xml</strong> - Duplicated words.
+           <code class="ph codeph language-markup">duplicates.xml</code> - Duplicated words.
         </li>
         <li class="li">
-           <strong class="ph b">grammar.xml</strong> - Grammar errors (includes a ban on the use of contractions
+           <code class="ph codeph language-markup">grammar.xml</code> - Grammar errors (includes a ban on the use of contractions
            in formal text )
         </li>
         <li class="li">
-           <strong class="ph b">punctuation.xml</strong> - Punctuation marks (includes a ban on smart quotes).
+           <code class="ph codeph language-markup">punctuation.xml</code> - Punctuation marks (includes a ban on smart quotes).
         </li>
         <li class="li">
-           <strong class="ph b">spelling.xml</strong> - Spelling mistakes
+           <code class="ph codeph language-markup">spelling.xml</code> - Spelling mistakes
         </li>
       </ul>
       <p class="p">
-         Each entry takes the form of a pair
+         Each entry takes the form of a pair:
       </p>
       <pre class="pre codeblock language-xml scale-80"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>
     <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>mistake</span><span class="ph token punctuation">&gt;</span></span>accessable<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>mistake</span><span class="ph token punctuation">&gt;</span></span>
@@ -118,7 +118,7 @@
       </ul>
       <p class="p">
          A custom ruleset file can be passed into the plug-in using the
-         <code class="ph codeph language-markup">text-rules.ruleset.file</code> parameter
+         <code class="ph codeph language-markup">text-rules.ruleset.file</code> parameter.
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> text-rules-echo <span class="keyword parmname">--input</span> document.ditamap --text-rules.ruleset.file<span class="ph token operator">=</span>PATH_TO_CUSTOM/ruleset.xml</code></pre>
     </section>

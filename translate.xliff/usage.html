@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><title>Usage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/dita.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="usage"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="usage"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
 
   <div class="container">
     <a class="navbar-brand" href="https://www.dita-ot.org/">Plugins for DITA Open Toolkit</a>
@@ -24,7 +24,7 @@
     <section class="section" id="usage__xliff-1.2-invocation-from-the-command-line"><h2 class="title h3 mt-3">XLIFF 1.2 Invocation from the command line</h2>
       
       <p class="p">
-         &nbsp;1. to create an XLIFF 1.2 File and associated skeletons with run:
+         1. to create an XLIFF 1.2 File and associated skeletons with run:
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xliff-create</span> <span class="ph token punctuation">\</span>
      <span class="keyword parmname">--input</span> document.ditamap <span class="ph token punctuation">\</span>
@@ -69,7 +69,7 @@
          <code class="keyword markupname xmlelement">&lt;target&gt;</code> elements.
       </div>
       <p class="p">
-         &nbsp;2. to populate an exisiting XLIFF 1.2 File with auto-translated text
+         2. to populate an exisiting XLIFF 1.2 File with auto-translated text:
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xliff-translate</span> <span class="ph token punctuation">\</span>
      <span class="keyword parmname">--input</span> translate.xlf <span class="ph token punctuation">\</span>
@@ -124,7 +124,7 @@
     <section class="section" id="usage__xliff-2.1-invocation-from-the-command-line"><h2 class="title h3 mt-3">XLIFF 2.1 Invocation from the command line</h2>
       
       <p class="p">
-         &nbsp;3. to create an XLIFF 2.1 File and associated skeletons with run:
+         3. to create an XLIFF 2.1 File and associated skeletons with run:
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xliff-create</span> <span class="ph token punctuation">\</span>
      <span class="keyword parmname">--input</span> document.ditamap  <span class="ph token punctuation">\</span>
@@ -162,7 +162,7 @@
   ...etc</code></pre>
       </figure>
       <p class="p">
-         &nbsp;4. to populate an exisiting XLIFF 2.1 File with auto-translated text
+         4. to populate an exisiting XLIFF 2.1 File with auto-translated text:
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xliff-translate</span> <span class="ph token punctuation">\</span>
      <span class="keyword parmname">--input</span> translate.xlf --translate.service<span class="ph token operator">=</span><span class="ph token punctuation">[</span>bing<span class="ph token operator">|</span>deepl<span class="ph token operator">|</span>watson<span class="ph token operator">|</span>yandex<span class="ph token punctuation">]</span> <span class="ph token punctuation">\</span>
@@ -214,7 +214,7 @@
     <section class="section" id="usage__populating-skeletons-from-the-command-line"><h2 class="title h3 mt-3">Populating Skeletons from the command line</h2>
       
       <p class="p">
-         &nbsp;5. recreate <code class="ph codeph language-markup">*.dita</code> files using an XLIFF File and its
+         5. recreate <code class="ph codeph language-markup">*.dita</code> files using an XLIFF File and its
          associated skeletons with run:
       </p>
       <pre class="pre codeblock language-bash scale-80"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--format</span> <span class="keyword option">xliff-dita</span> <span class="ph token punctuation">\</span>
