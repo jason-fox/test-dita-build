@@ -1,9 +1,9 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2021"><meta name="generator" content="DITA-OT"><meta name="abstract" content="This is a DITA-OT Plug-in which creates a set of output files suitable to create a ReadTheDocs documentation project. The transform is an extension of the existing DITA-OT markdown plug-in (org.lwdita) and creates a well-formatted mkdocs.yaml file."><meta name="description" content="This is a DITA-OT Plug-in which creates a set of output files suitable to create a ReadTheDocs documentation project. The transform is an extension of the existing DITA-OT markdown plug-in (org.lwdita) and creates a well-formatted mkdocs.yaml file."><meta name="keywords" content="ReadTheDocs, plug-in"><title>ReadTheDocs Plug-in</title>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2022"><meta name="generator" content="DITA-OT"><meta name="abstract" content="This is a DITA-OT Plug-in which creates a set of output files suitable to create a ReadTheDocs documentation project. The transform is an extension of the existing DITA-OT markdown plug-in (org.lwdita) and creates a well-formatted mkdocs.yaml file."><meta name="description" content="This is a DITA-OT Plug-in which creates a set of output files suitable to create a ReadTheDocs documentation project. The transform is an extension of the existing DITA-OT markdown plug-in (org.lwdita) and creates a well-formatted mkdocs.yaml file."><meta name="keywords" content="ReadTheDocs, plug-in"><title>ReadTheDocs Plug-in</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="readthedocs-plug-in"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/theme.css"><link rel="stylesheet" type="text/css" href="../css/common-extended.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"></head><body id="readthedocs-plug-in"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
 
   <div class="container">
     <a class="navbar-brand" href="https://www.dita-ot.org/">
@@ -23,7 +23,7 @@
       </ul>
     </div>
   </div>
-</nav></header><div class="container" id="content"><div class="row"><nav role="toc" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action active" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../readthedocs/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../readthedocs/usage.html">Usage</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+</nav></header><div class="container" id="content"><div class="row"><nav role="navigation" class="col-lg-3"><div class="list-group me-3"><a class="list-group-item list-group-item-action" href="../index.html">DITA-OT Plugins</a><a class="list-group-item list-group-item-action" href="../audiobook/index.html">Audiobook Plug-in</a><a class="list-group-item list-group-item-action" href="../extend.css/index.html">Extended CSS Plug-in</a><a class="list-group-item list-group-item-action" href="../javadoc/index.html">Javadoc Plug-in</a><a class="list-group-item list-group-item-action" href="../pandoc/index.html">Pandoc Plug-in</a><a class="list-group-item list-group-item-action" href="../passthrough/index.html">Passthrough Plugin</a><a class="list-group-item list-group-item-action" href="../postman/index.html">Postman Plug-in</a><a class="list-group-item list-group-item-action" href="../pretty-dita/index.html">DITA Prettifier Plug-in</a><a class="list-group-item list-group-item-action" href="../prismjs/index.html">Prism-JS Plug-in</a><a class="list-group-item list-group-item-action active" href="../readthedocs/index.html">ReadTheDocs Plug-in</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../readthedocs/install.html">Install</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="../readthedocs/usage.html">Usage</a><a class="list-group-item list-group-item-action" href="../splash/index.html">Splash Screen Plug-in</a><a class="list-group-item list-group-item-action" href="../swagger/index.html">Swagger Plug-in</a><a class="list-group-item list-group-item-action" href="../tabs.css/index.html">CSS-only Tabs Plug-in</a><a class="list-group-item list-group-item-action" href="../translate.xliff/index.html">XLIFF Translate Plug-in</a><a class="list-group-item list-group-item-action" href="../unit-test/index.html">Unit Test Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl/index.html">DITA Validator Plug-in</a><a class="list-group-item list-group-item-action" href="../validate.svrl.text-rules/index.html">Spelling and Grammar Checker Plug-in</a><a class="list-group-item list-group-item-action" href="../watermark/index.html">Watermark Plug-in</a></div></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title text-dark" id="ariaid-title1">ReadTheDocs Plug-in</h1>
   
   
@@ -39,7 +39,7 @@
   <article class="topic nested1" aria-labelledby="ariaid-title2" id="examples">
     <h2 class="title text-dark h3 mt-3" id="ariaid-title2">Examples</h2>
     <div class="body">
-      <section class="section" id="examples__sample-mkdocs.yaml-file"><h3 class="title text-dark h4">Sample MkDocs.yaml File</h3>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Sample MkDocs.yaml File</figcaption>
         
         <pre class="pre codeblock border rounded language-yaml scale-80"><code><span class="ph token key atrule">site_name</span><span class="ph token punctuation">:</span> <span class="ph token string">'ReadTheDocs Plug-in'</span>
 
@@ -50,12 +50,12 @@
            <span class="ph token punctuation">-</span>  'Full list of features'<span class="ph token punctuation">:</span> <span class="ph token string">'topics/features-full.md'</span>
            <span class="ph token punctuation">-</span>  'Basic usage'<span class="ph token punctuation">:</span> <span class="ph token string">'topics/basic-usage.md'</span>
     <span class="ph token key atrule">theme</span><span class="ph token punctuation">:</span> mkdocs</code></pre>
-        <p class="p">
-           Additionally it is possible to use the plug-in to create a DITA <code class="keyword markupname xmlelement">&lt;bookmap&gt;</code>
-           file from an existing <code class="ph codeph">mkdocs.yaml</code> file.
-        </p>
-      </section>
-      <section class="section" id="examples__sample-ditamap"><h3 class="title text-dark h4">Sample Ditamap</h3>
+      </figure>
+      <p class="p">
+         Additionally it is possible to use the plug-in to create a DITA <code class="keyword markupname xmlelement">&lt;bookmap&gt;</code>
+         file from an existing <code class="ph codeph">mkdocs.yaml</code> file.
+      </p>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>Sample Ditamap</figcaption>
         
         <pre class="pre codeblock border rounded language-xml scale-80"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="ph token doctype">&lt;!DOCTYPE bookmap
@@ -77,7 +77,7 @@
     <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>topicref</span> <span class="ph token attr-name">format</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>md<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>topics/basic-usage.md<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
   <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>chapter</span><span class="ph token punctuation">&gt;</span></span>
 <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>bookmap</span><span class="ph token punctuation">&gt;</span></span></code></pre>
-      </section>
+      </figure>
       <section class="section" id="examples__limitations"><h3 class="title text-dark">Limitations</h3>
         
         <p class="p">
