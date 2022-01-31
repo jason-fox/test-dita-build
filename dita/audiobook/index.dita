@@ -36,4 +36,12 @@
       </fig>
     </body>
   </topic>
+  <topic id="install" conref="./install.dita#install">
+    <title/>
+    <body/>
+  </topic>
+  <topic id="usage" conref="./usage.dita#usage">
+    <title/>
+    <body/>
+  </topic>
 </topic>
