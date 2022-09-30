@@ -1,6 +1,3 @@
-.list-group-item-dark {
-  background-color: #e7f1ff;
-}
 
 footer {
   background-color: #e7f1ff;
@@ -16,40 +13,3 @@ footer {
   margin: 1rem -0.75rem 0;
   border: solid #dee2e6 1px;
 }
-
-
-.numcharref {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.parameterentity {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.textentity {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.xmlatt {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.xmlelement {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.xmlnsname {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
-.xmlpi {
-  color: var(--bs-pink);
-  font-family: var(--bs-font-monospace);
-}
-
