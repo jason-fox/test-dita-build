@@ -2,7 +2,7 @@
 <?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?>
 <project xmlns="https://www.dita-ot.org/project">
   <context id="html" name="HTML">
-    <input href="../../dita/document.ditamap"/>
+    <input href="../../flowers/flowers.ditamap"/>
     <profile>
       <ditaval href="html.ditaval"/>
     </profile>
@@ -15,8 +15,11 @@
       <param name="args.css" value="theme.css"/>
       <param name="args.csspath" value="css"/>
       <param name="args.cssroot" path="."/>
+      <param name="args.favicon" value="favicon.svg"/>
+      <param name="args.faviconpath" value="favicon"/>
+      <param name="args.faviconroot" path="."/>
       <param name="args.hdr" href="header.xml"/>
-      <!--param name="args.breadcrumbs" value="yes"/-->
+      <param name="args.breadcrumbs" value="yes"/>
       <param name="html5.toc.generate" value="no"/>
       <param name="args.rellinks" value="none"/>
       <param name="nav-toc" value="nav-pill-full"/>
