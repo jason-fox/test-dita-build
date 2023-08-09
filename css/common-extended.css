@@ -4,13 +4,55 @@
  *  See the accompanying LICENSE file for applicable licenses.
  */
 
-.cmdname,
-.codeph,
-.filepath,
-.option,
-.parmname {
-  color: var(--bs-code-color);
-  font-family: var(--bs-font-monospace);
+:root {
+  --dita-prussian-blue: #1d365d;
+  --dita-maroon: #800000;
+  --dita-violet: var(--bs-purple);
+}
+
+[data-bs-theme='dark'] {
+  --dita-prussian-blue: #6a91cf;
+  --dita-violet: #cc99cd;
+  --dita-maroon: #ff7676;
+}
+
+.bs-toggler-dark,
+.bs-toggler-light {
+  display: none;
+}
+
+[data-bs-theme='light'] .bs-toggler-light {
+  display: inherit;
+}
+
+[data-bs-theme='light'] .bs-toggler-auto {
+  display: none;
+}
+
+[data-bs-theme='dark'] .bs-toggler-dark {
+  display: inherit;
+}
+
+[data-bs-theme='dark'] .bs-toggler-auto {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dita-prussian-blue: #6a91cf;
+    --dita-violet: #cc99cd;
+    --dita-maroon: #ff7676;
+  }
+
+  [data-bs-theme='light'] {
+    --dita-prussian-blue: #1d365d;
+    --dita-maroon: #800000;
+    --dita-violet: var(--bs-purple);
+  }
+}
+
+.syntaxdiagram {
+  color: var(--dita-maroon);
 }
 
 .numcharref,
@@ -20,13 +62,22 @@
 .xmlelement,
 .xmlnsname,
 .xmlpi {
-  color: var(--bs-purple);
+  color: var(--dita-violet);
+  font-family: var(--bs-font-monospace);
+}
+
+.cmdname,
+.codeph,
+.filepath,
+.option,
+.parmname {
+  color: var(--bs-code-color);
   font-family: var(--bs-font-monospace);
 }
 
 .cmdname,
 .parmname {
-  color: #1d365d;
+  color: var(--dita-prussian-blue);
   font-weight: bold;
 }
 
@@ -55,6 +106,14 @@
   z-index: 1020;
 }
 
+[type='search'] {
+  background: var(--bs-nav-link-hover-color);
+}
+
+[type='search']::placeholder {
+  color: #6a91cf !important;
+}
+
 /*!
  *  This file is part of the DITA Bootstrap plug-in for DITA Open Toolkit.
  *  See the accompanying LICENSE file for applicable licenses.
@@ -63,79 +122,88 @@
 /*! These values define the relative width of the
  *  main content window compared with the sidebar-nav
  */
+
+.bs-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas: 'sidebar main';
+  grid-template-columns: 1fr 5fr;
+}
+
+.bs-sidebar {
+  grid-area: sidebar;
+}
+
+.bs-main {
+  grid-area: main;
+}
+
+.bs-content {
+  grid-area: content;
+  min-width: 1px;
+}
+
+.bs-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 991.98px) {
+  .bs-main {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 768px) {
-  .bs-container {
+  .bs-main {
     display: grid;
-    gap: 1.5rem;
-    grid-template-areas: 'sidebar main';
-    grid-template-columns: 1fr 3fr;
-    width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .bs-container {
-    width: 992px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .bs-container {
-    width: 1200px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .bs-container {
-    width: 1400px;
-  }
-}
-
-/*! These values define the relative width of the
- *  main content window compared with the sidebar-nav
- */
-@media (min-width: 768px) {
-  .bs-main {
-    width: 576px;
+    grid-template-areas: 'content';
+    grid-template-rows: auto auto 1fr;
+    gap: inherit;
   }
 }
 
 @media (min-width: 992px) {
   .bs-main {
-    width: 744px;
+    grid-template-areas: 'content';
+    grid-template-rows: auto 1fr;
   }
-}
 
-@media (min-width: 1200px) {
-  .bs-main {
-    width: 900px;
+  .codeblock {
+    max-width: calc(80vw - 2rem);
+    min-width: 100%;
   }
-}
 
-@media (min-width: 1400px) {
-  .bs-main {
-    width: 1050px;
-  }
-}
-
-@media (min-width: 768px) {
-  .bs-sidebar-nav {
-    display: block !important;
-    height: calc(100vh - 7rem);
-    margin-left: 2rem;
-    overflow-y: auto;
-    padding-left: 0.25rem;
+  .bs-sidebar {
     position: -webkit-sticky;
     position: sticky;
     top: 5rem;
+    display: block !important;
+    height: calc(100vh - 6rem);
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    overflow-y: auto;
   }
 }
 
-@media (min-width: 768px) {
-  .bs-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+@media (max-width: 991.98px) {
+  .bd-navbar .bd-navbar-toggle {
+    width: 4.25rem;
+  }
+
+  .bs-container {
+    grid-template-columns: 0fr 1fr;
+  }
+
+  .codeblock {
+    max-width: calc(100vw - 11rem);
+    min-width: 100%;
+  }
+
+  .bs-sidebar .offcanvas-lg {
+    border-right-color: var(--bs-border-color);
   }
 }
 
@@ -189,8 +257,9 @@
 @media (max-width: 767.98px) {
   .bd-links > ul {
     padding: 1.5rem 0.75rem;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
+    background-color: var(--bs-body-bg);
+    border-bottom: 1px solid;
+    border-bottom-color: var(--bs-body-color);
   }
 }
 
@@ -219,6 +288,11 @@
   transform: rotate(90deg);
 }
 
+.bd-links .btn:focus-visible {
+  outline: 2px solid;
+  outline-color: var(--bs-link-hover-color);
+}
+
 .bd-links .active {
   font-weight: 600;
   color: var(--bs-body-color);
@@ -245,7 +319,7 @@
   --prism-url: #67cdcc;
 }
 
-[data-theme="dark"] {
+[data-bs-theme="dark"] {
   --prism-maintext: #ccc;
   --prism-background: #2d2d2d;
   --prism-text: #999;
@@ -274,7 +348,7 @@
     --prism-url: #9a6e3a;
   }
 
-  [data-theme="light"] {
+  [data-bs-theme="light"] {
     --prism-maintext: black;
     --prism-background: #f5f2f0;
     --prism-text: #999;
