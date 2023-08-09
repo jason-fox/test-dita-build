@@ -14,7 +14,7 @@
     <topicref href="tasks/gardenPreparation.dita"/>
   </topicref>
   <topicref href="topics/index.dita" collection-type="sequence">
-    <topicref href="concepts/springFlowers.dita" collection-type="sequence">
+    <topicref href="concepts/springFlowers.dita" collection-type="sequence"  chunk="to-content" >
       <topicref href="topics/flowers/iris.dita"/>
       <topicref href="topics/flowers/snowdrop.dita"/>
     </topicref>
