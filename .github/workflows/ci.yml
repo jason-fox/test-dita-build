@@ -12,7 +12,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
       - name: Build Bootstrap ⚙️
-        uses: dita-ot/dita-ot-action@master
+        uses: jason-fox/dita-ot-action@master
         with:
           install: |
             apt-get update -q
@@ -23,7 +23,7 @@ jobs:
             fox.jason.extend.css
             https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             fox.jason.prismjs
-            fox.jason.favicon
+            fox.jason.faviconxxx
           project: .github/dita-ot/html.xml
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
