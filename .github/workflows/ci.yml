@@ -24,7 +24,9 @@ jobs:
             https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             fox.jason.prismjs
             fox.jason.favicon
-          project: .github/dita-ot/html.xml
+          # project: .github/dita-ot/html.xml
+          build: |
+            dita --project=.github/dita-ot/html.xml --processing-mode=strict --verbose
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
