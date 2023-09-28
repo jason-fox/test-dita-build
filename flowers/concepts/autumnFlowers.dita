@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="autumnFlowers">
+<conceptx id="autumnFlowers">
     <title>Autumn Flowers</title>
     <conbody>
         <p>Autumn is the season of the primary harvest. Autumn falls during September - November in
@@ -13,6 +13,6 @@
             Hypericum, Iris, Juniper, Kangaroo paw, Kalancheo, Liatrus, Lily, Asiatic, Lily,
             Gloriosa, Misty Blue, Orchid, Pepper berry, Protea, Queen Ann's Lace, Quince, Rover,
             Roses, Rowen berry, Salvia, Solidago, Statice, Star of Bethlehem, Sunflower, Yarrow,
-            Zinnia.</p!-->
+            Zinnia.</p>
     </conbody>
-</concept>
+</conceptx>
