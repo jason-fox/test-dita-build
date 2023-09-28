@@ -23,7 +23,7 @@ jobs:
             fox.jason.extend.css
             https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             fox.jason.prismjs
-            fox.jason.faviconxxx
+            fox.jason.favicon
           project: .github/dita-ot/html.xml
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -42,7 +42,7 @@ jobs:
           plugins: |
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-          project: .github/dita-ot/pdf.xml
+          project: .github/dita-ot/pdf.xmlx
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
