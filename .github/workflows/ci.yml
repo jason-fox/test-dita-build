@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       - name: Build Bootstrap ⚙️
         uses: dita-ot/dita-ot-action@master
         with:
@@ -47,7 +47,7 @@ jobs:
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           project: .github/dita-ot/pdf.xml
       - name: Upload PDF 📚
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: dita-artifact
           path: 'out/pdf'
