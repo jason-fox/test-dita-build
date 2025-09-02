@@ -12,7 +12,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v5
       - name: Build Bootstrap ⚙️
-        uses: dita-ot/dita-ot-action@master
+        uses: jason-fox/dita-ot-action@master
         with:
           dita-ot-version: 3.7.4
           install: |
