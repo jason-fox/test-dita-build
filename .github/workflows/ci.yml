@@ -12,9 +12,9 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v5
       - name: Build Bootstrap ⚙️
-        uses: dita-ot/dita-ot-action@master
+        uses: dita-ot/dita-ot-action@4.3.3
         with:
-          dita-ot-version: 3.7.4
+          dita-ot-version: 4.3.3
           install: |
             apt-get update -q
             export DEBIAN_FRONTEND=noninteractive
